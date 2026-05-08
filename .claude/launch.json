@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "cellsource-hub",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3456", "/Users/jaidasuthers/Desktop/ cellsource-hub page"],
+      "port": 3456
+    }
+  ]
+}

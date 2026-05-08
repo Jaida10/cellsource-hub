@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cellsource — Health Beyond the Surface</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles copy.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     AMBIENT BACKGROUND (cursor-reactive)
+═══════════════════════════════════════ -->
+<div class="bg-cursor-teal"></div>
+<div class="bg-cursor-gold"></div>
+<div id="particles-container"></div>
+
+<!-- ═══════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════ -->
+<nav class="hub-nav" role="navigation" aria-label="Main navigation">
+  <div class="hub-nav-inner">
+
+    <a href="index.html" class="hub-nav-brand">
+      <img
+        src="Hub Page |Website Images/Cellsoures | nav-brand-mark.png"
+        alt="Cellsource"
+        class="hub-nav-brandmark"
+        width="36"
+        height="36"
+      >
+      <span class="hub-nav-wordmark">Cellsource</span>
+    </a>
+
+    <div class="hub-nav-right">
+      <ul class="hub-nav-links">
+        <li><a href="#science">The Science</a></li>
+        <li><a href="assessment.html">The Assessment</a></li>
+        <li><a href="olylife.html" target="_blank" rel="noopener">Explore OlyLife</a></li>
+      </ul>
+      <a href="assessment.html" class="hub-nav-cta desktop-only">Find your cellular pattern</a>
+    </div>
+
+    <button class="hub-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div class="hub-mobile-menu" role="dialog" aria-label="Navigation menu">
+  <a href="#science">The Science</a>
+  <a href="assessment.html">The Assessment</a>
+  <a href="olylife.html" target="_blank" rel="noopener">Explore OlyLife</a>
+  <a href="assessment.html" class="hub-nav-cta">Find your cellular pattern</a>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SECTION 1 — HERO
+═══════════════════════════════════════ -->
+<section class="hub-hero" aria-label="Hero">
+
+  <div class="hub-hero-bg" style="background-image: url('Hub Page |Website Images/Cellsoures | hero-background.png');"></div>
+  <div class="hub-hero-atmosphere"></div>
+  <div class="hub-hero-grain"></div>
+
+  <div class="hub-hero-content">
+    <span class="hub-hero-label">Cellsource</span>
+
+    <h1 class="hub-hero-headline">Health beyond the surface.</h1>
+
+    <p class="hub-hero-sub">The frequency layer of health that some never reach. This is where we begin.</p>
+
+    <a href="assessment.html" class="hub-hero-cta">Find your cellular pattern — it is free</a>
+  </div>
+
+  <div class="hub-scroll-indicator" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 3v14M4 11l6 6 6-6" stroke="#00D4CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════
+     TICKER STRIP
+═══════════════════════════════════════ -->
+<div class="hub-ticker" aria-hidden="true">
+  <div class="hub-ticker-track">
+    <!-- Group 1 -->
+    <div class="hub-ticker-group">
+      <span class="hub-ticker-phrase">Cellsource</span>
+      <span class="hub-ticker-sep"></span>
+      <span class="hub-ticker-phrase">Frequency Technology</span>
+      <span class="hub-ticker-sep"></span>
+      <span class="hub-ticker-phrase">Cellular Health</span>
+      <span class="hub-ticker-sep"></span>
+      <span class="hub-ticker-phrase">Health Beyond the Surface</span>
+      <span class="hub-ticker-sep"></span>
+    </div>
+    <!-- Group 2 (duplicate for seamless loop) -->
+    <div class="hub-ticker-group" aria-hidden="true">
+      <span class="hub-ticker-phrase">Cellsource</span>
+      <span class="hub-ticker-sep"></span>
+      <span class="hub-ticker-phrase">Frequency Technology</span>
+      <span class="hub-ticker-sep"></span>
+      <span class="hub-ticker-phrase">Cellular Health</span>
+      <span class="hub-ticker-sep"></span>
+      <span class="hub-ticker-phrase">Health Beyond the Surface</span>
+      <span class="hub-ticker-sep"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SECTION 2 — THE REALITY CHECK
+═══════════════════════════════════════ -->
+<section class="hub-section hub-reality" aria-label="The Reality Check">
+  <div class="hub-reality-grid">
+
+    <!-- Left: Copy -->
+    <div class="hub-reality-copy reveal">
+      <span class="hub-label">The Reality Check</span>
+
+      <h2 class="hub-reality-headline">You are doing everything right. And something still feels off.</h2>
+
+      <div class="hub-reality-boxes">
+        <div class="hub-reality-box">
+          <span class="hub-reality-box-num">01</span>
+          <span class="hub-reality-box-text">Your energy does not hold the way it should.</span>
+        </div>
+        <div class="hub-reality-box">
+          <span class="hub-reality-box-num">02</span>
+          <span class="hub-reality-box-text">You push through the day but the tank never feels full.</span>
+        </div>
+        <div class="hub-reality-box">
+          <span class="hub-reality-box-num">03</span>
+          <span class="hub-reality-box-text">Focus, clarity and drive are there one day and gone the next.</span>
+        </div>
+      </div>
+
+      <div class="hub-reality-body">
+        <p>You eat well. You take the supplements. You have done the work and you are proud of it.</p>
+        <p>But there is this feeling. A ceiling you keep hitting. Energy that does not quite hold. Recovery that takes longer. A sharpness that comes and goes without explanation.</p>
+        <p>You are not going backwards. You have just never been shown the layer beneath it all.</p>
+      </div>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="hub-reality-image-wrap reveal reveal-d2">
+      <img
+        src="Hub Page |Website Images/Cellsoures | visual-2-macro.png"
+        alt="Cellular health visualised"
+        class="hub-reality-image"
+        loading="lazy"
+        width="600"
+        height="700"
+      >
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     QUOTE MOMENT 1
+═══════════════════════════════════════ -->
+<section class="hub-quote-moment" aria-label="Quote">
+
+  <img
+    src="Hub Page |Website Images/Cellsoures | quote-symbol-1.png"
+    alt=""
+    class="hub-quote-symbol reveal"
+    loading="lazy"
+    width="80"
+    height="80"
+    aria-hidden="true"
+  >
+
+  <span class="hub-qm-line-1 reveal reveal-d1">Not another supplement.</span>
+  <span class="hub-qm-line-2 reveal reveal-d2">NOT ANOTHER DIET.</span>
+  <span class="hub-qm-line-3 reveal reveal-d3">The layer beneath both.</span>
+
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 3 — THE LAYER
+═══════════════════════════════════════ -->
+<section class="hub-section hub-layer" id="science" aria-label="The Layer">
+  <div class="hub-layer-inner reveal">
+
+    <span class="hub-label">The Layer</span>
+
+    <h2 class="hub-layer-headline">Everything runs deeper than you think.</h2>
+
+    <div class="hub-layer-body">
+      <p>Beneath every habit you have built.</p>
+      <p>There is a layer where your cells produce energy, regulate your sleep and manage your inflammation. Every single thing you feel day to day begins here.</p>
+      <p><span class="hub-layer-emphasis">This is the cellular layer. And it runs on frequency.</span></p>
+      <p>When this layer is charged and communicating clearly, everything above it works better. Your energy holds. Clarity sharpens. Your body performs at its most optimised level.</p>
+      <p>Some people never reach this layer. Not because it is out of reach. But because it's not normalised in health.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOUR BEAT VISUAL SEQUENCE
+═══════════════════════════════════════ -->
+<section class="hub-beats" aria-label="How frequency technology works">
+
+  <div class="hub-beats-header">
+    <span class="hub-label reveal">The Science</span>
+    <h2 class="hub-beats-title reveal reveal-d1">How frequency technology works.</h2>
+    <p class="hub-beats-sub reveal reveal-d2">Four beats. The complete picture.</p>
+  </div>
+
+  <div class="hub-beats-track" id="beatsTrack" role="region" aria-label="Four beat sequence">
+
+    <!-- Beat 1 -->
+    <article class="hub-beat-card" aria-label="Beat 1: The Problem">
+      <div class="hub-beat-bg" style="background-image: url('Hub Page |Website Images/Cellsoures |  beat-1-charged-depleted.png');"></div>
+      <div class="hub-beat-overlay"></div>
+      <div class="hub-beat-copy">
+        <span class="hub-beat-label">The Problem</span>
+        <h3 class="hub-beat-headline">Your cells run on charge. When it drops, everything does.</h3>
+        <p class="hub-beat-body">Every symptom traces back to the same source.</p>
+      </div>
+    </article>
+
+    <!-- Beat 2 -->
+    <article class="hub-beat-card" aria-label="Beat 2: The Gap">
+      <div class="hub-beat-bg" style="background-image: url('Hub Page |Website Images/Cellsoures | beat-2-inputs-blocked.png');"></div>
+      <div class="hub-beat-overlay"></div>
+      <div class="hub-beat-copy">
+        <span class="hub-beat-label">The Gap</span>
+        <h3 class="hub-beat-headline">The right inputs. The wrong layer.</h3>
+        <p class="hub-beat-body">Food, supplements and sleep matter. But none of them reach here.</p>
+      </div>
+    </article>
+
+    <!-- Beat 3 -->
+    <article class="hub-beat-card" aria-label="Beat 3: The Shift">
+      <div class="hub-beat-bg" style="background-image: url('Hub Page |Website Images/Cellsoures |  beat-3-frequency-arrives.png');"></div>
+      <div class="hub-beat-overlay"></div>
+      <div class="hub-beat-copy">
+        <span class="hub-beat-label">The Shift</span>
+        <h3 class="hub-beat-headline">Frequency reaches where nothing else does.</h3>
+        <p class="hub-beat-body">PEMF and Terahertz waves work at the bioelectromagnetic layer your cells actually run on.</p>
+      </div>
+    </article>
+
+    <!-- Beat 4 -->
+    <article class="hub-beat-card" aria-label="Beat 4: The Result">
+      <div class="hub-beat-bg" style="background-image: url('Hub Page |Website Images/Cellsoures | beat-4-fully-charged.png .png');"></div>
+      <div class="hub-beat-overlay"></div>
+      <div class="hub-beat-copy">
+        <span class="hub-beat-label">The Result</span>
+        <h3 class="hub-beat-headline">Everything it powers.</h3>
+        <p class="hub-beat-body">Energy. Clarity. Recovery. Sleep. All of it flows from the same charged source.</p>
+      </div>
+    </article>
+
+  </div>
+
+  <nav class="hub-beats-nav" aria-label="Beat navigation">
+    <button class="hub-beats-dot is-active" data-beat="0" aria-label="Beat 1">01</button>
+    <button class="hub-beats-dot" data-beat="1" aria-label="Beat 2">02</button>
+    <button class="hub-beats-dot" data-beat="2" aria-label="Beat 3">03</button>
+    <button class="hub-beats-dot" data-beat="3" aria-label="Beat 4">04</button>
+  </nav>
+
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 4 — THE TECHNOLOGY
+═══════════════════════════════════════ -->
+<section class="hub-tech" aria-label="The Technology">
+
+  <div class="hub-tech-bg" style="background-image: url('Hub Page |Website Images/Cellsoures | technology-atmospheric.png');"></div>
+  <div class="hub-tech-overlay"></div>
+
+  <div class="hub-tech-content">
+    <span class="hub-label reveal">The Technology</span>
+
+    <h2 class="hub-tech-headline reveal reveal-d1">This is frequency technology.</h2>
+
+    <p class="hub-tech-sub reveal reveal-d2">Not a supplement. Not a diet. The layer beneath both.</p>
+
+    <hr class="hub-tech-rule reveal reveal-d3">
+
+    <div class="hub-tech-body reveal reveal-d4">
+      <p>Frequency technology works at the bioelectromagnetic layer where your cells actually produce energy, send signals and coordinate repair.</p>
+      <p>It does not add to your routine. It upgrades the foundation everything else is built on.</p>
+      <p>PEMF therapy recharges cellular energy by stimulating your mitochondria and restoring the natural electrical balance your cells need to perform. Terahertz frequency penetrates four to five centimetres beneath the skin, reaching the cellular environment that no supplement or food ever reaches.</p>
+      <p>Together they do something nothing else does. They work at the source.</p>
+    </div>
+
+    <p class="hub-tech-statement reveal reveal-d5">Health beyond the surface. This is where it begins.</p>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════
+     QUOTE MOMENT 3
+═══════════════════════════════════════ -->
+<section class="hub-quote-moment" aria-label="Quote">
+
+  <img
+    src="Hub Page |Website Images/Cellsoures | quote-symbol-2.png"
+    alt=""
+    class="hub-quote-symbol reveal"
+    loading="lazy"
+    width="80"
+    height="80"
+    aria-hidden="true"
+  >
+
+  <p class="hub-qm-single reveal reveal-d1">"Are you ready to go deeper"</p>
+
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 5 — WHAT IS CELLSOURCE
+═══════════════════════════════════════ -->
+<section class="hub-section hub-brand" aria-label="What is Cellsource">
+  <div class="hub-brand-grid">
+
+    <!-- Left: Copy -->
+    <div class="hub-brand-copy reveal">
+      <span class="hub-label">The Brand</span>
+
+      <h2 class="hub-brand-headline">
+        What is<br>
+        <span class="teal-italic">Cellsource?</span>
+      </h2>
+
+      <div class="hub-brand-arrows">
+        <div class="hub-brand-arrow-item">
+          <span class="hub-brand-arrow">→</span>
+          <span class="hub-brand-arrow-text">you become someone who understands their health at the deepest level</span>
+        </div>
+        <div class="hub-brand-arrow-item">
+          <span class="hub-brand-arrow">→</span>
+          <span class="hub-brand-arrow-text">your perspective on what health is might shift</span>
+        </div>
+        <div class="hub-brand-arrow-item">
+          <span class="hub-brand-arrow">→</span>
+          <span class="hub-brand-arrow-text">you discover a layer of health that most people never know exists</span>
+        </div>
+      </div>
+
+      <p class="hub-brand-closing">health beyond the surface becomes your reality</p>
+    </div>
+
+    <!-- Right: Visual placeholder -->
+    <div class="hub-brand-visual reveal reveal-d2" aria-hidden="true">
+      <div class="hub-brand-visual-membrane">
+        <svg class="cell-membrane-svg" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g class="cm-ring-outer">
+            <ellipse cx="320" cy="320" rx="295" ry="285" fill="none" stroke="rgba(0,212,204,0.18)" stroke-width="1" stroke-dasharray="5 10"/>
+          </g>
+          <g class="cm-ring-mid">
+            <ellipse cx="320" cy="320" rx="215" ry="210" fill="none" stroke="rgba(0,212,204,0.28)" stroke-width="1.5" stroke-dasharray="4 7"/>
+          </g>
+          <g class="cm-ring-inner">
+            <ellipse cx="320" cy="320" rx="140" ry="138" fill="none" stroke="rgba(0,212,204,0.45)" stroke-width="2" stroke-dasharray="3 5"/>
+          </g>
+          <circle class="cm-core" cx="320" cy="320" r="14" fill="rgba(0,212,204,0.55)"/>
+          <circle class="cm-wave" cx="320" cy="320" r="50" fill="none" stroke="rgba(0,212,204,0.2)" stroke-width="1"/>
+          <circle class="cm-wave" cx="320" cy="320" r="85" fill="none" stroke="rgba(0,212,204,0.12)" stroke-width="1" style="animation-delay: 0.8s;"/>
+        </svg>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 6 — WHO THIS IS FOR
+═══════════════════════════════════════ -->
+<section class="hub-section hub-audience" aria-label="Who this is for">
+  <div class="hub-audience-inner">
+
+    <span class="hub-label reveal">This Is For You</span>
+
+    <h2 class="hub-audience-headline reveal reveal-d1">You already know something is missing. This is for the ones ready to find it.</h2>
+
+    <div class="hub-audience-boxes">
+      <div class="hub-audience-box reveal reveal-d1">
+        <span class="hub-audience-num">01</span>
+        <p class="hub-audience-text">You do everything for your health and still feel like you are operating below your potential.</p>
+      </div>
+      <div class="hub-audience-box reveal reveal-d2">
+        <span class="hub-audience-num">02</span>
+        <p class="hub-audience-text">You are not interested in the generic. You want to go deeper, understand more and feel the difference.</p>
+      </div>
+      <div class="hub-audience-box reveal reveal-d3">
+        <span class="hub-audience-num">03</span>
+        <p class="hub-audience-text">You have tried the diets, the supplements, the routines. And you are ready to go deeper.</p>
+      </div>
+    </div>
+
+    <p class="hub-audience-closing reveal reveal-d4">For the health obsessed. The biohackers. The ones who refuse to accept average.</p>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 7 — SOCIAL PROOF
+═══════════════════════════════════════ -->
+<section class="hub-social" aria-label="Real Experiences">
+  <div class="hub-social-inner">
+
+    <span class="hub-label" style="text-align:center; display:block;" class="reveal">Real Experiences</span>
+
+    <h2 class="hub-social-headline reveal reveal-d1">What shifts when you reach the cellular layer.</h2>
+
+    <div class="hub-testimonials-grid">
+
+      <article class="hub-testimonial-card reveal">
+        <span class="hub-testimonial-quote-mark">"</span>
+        <p class="hub-testimonial-text">I have struggled with sleep my whole life. Within a week of using the P90 I added an extra hour of sleep every single night.</p>
+        <p class="hub-testimonial-attr">— Sarah, verified customer</p>
+      </article>
+
+      <article class="hub-testimonial-card reveal reveal-d1">
+        <span class="hub-testimonial-quote-mark">"</span>
+        <p class="hub-testimonial-text">We bought the P90+ for my husband's psoriatic arthritis. I started using it purely because it was there. I did not expect much. But here I am, sleeping better, thinking clearer and feeling more put together than usual.</p>
+        <p class="hub-testimonial-attr">— Emma, verified customer</p>
+      </article>
+
+      <article class="hub-testimonial-card reveal reveal-d2">
+        <span class="hub-testimonial-quote-mark">"</span>
+        <p class="hub-testimonial-text">This technology is the best. With the P90+ I have more energy, feel healthier, and resolved my oxidative stress. My clients have had amazing results too. I cannot say enough.</p>
+        <p class="hub-testimonial-attr">— Lisa, verified customer</p>
+      </article>
+
+      <article class="hub-testimonial-card reveal">
+        <span class="hub-testimonial-quote-mark">"</span>
+        <p class="hub-testimonial-text">The OlyLife technology changed my life. I went from requiring four pain medications down to none within four weeks of using the P90+.</p>
+        <p class="hub-testimonial-attr">— Michael, verified customer</p>
+      </article>
+
+      <article class="hub-testimonial-card reveal reveal-d1">
+        <span class="hub-testimonial-quote-mark">"</span>
+        <p class="hub-testimonial-text">Using the device twice a day for two months my glucose levels started to decrease. After five months my A1C dropped from 8.1 to 6.4. I am very satisfied with the direction my health is going.</p>
+        <p class="hub-testimonial-attr">— David, verified customer</p>
+      </article>
+
+      <article class="hub-testimonial-card reveal reveal-d2">
+        <span class="hub-testimonial-quote-mark">"</span>
+        <p class="hub-testimonial-text">This company has amazing devices allowing the nervous system to be regulated and the body to get back into balance. We are electrical beings and your battery needs charging every single day.</p>
+        <p class="hub-testimonial-attr">— Karen, verified customer</p>
+      </article>
+
+      <article class="hub-testimonial-card reveal">
+        <span class="hub-testimonial-quote-mark">"</span>
+        <p class="hub-testimonial-text">Nothing worked. Until I found something different. When I combined PEMF and Terahertz therapy everything changed. This is real change from the inside out.</p>
+        <p class="hub-testimonial-attr">— James, verified customer</p>
+      </article>
+
+    </div>
+
+    <p class="hub-social-closing reveal">These are real people. Real shifts. The cellular layer was always there.</p>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 8 — YOUR STARTING POINT
+═══════════════════════════════════════ -->
+<section class="hub-section hub-start" aria-label="Your Starting Point">
+
+  <!-- Ambient cell rings -->
+  <div class="hub-start-membrane" aria-hidden="true">
+    <svg viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg" width="640" height="640">
+      <g class="cm-ring-outer">
+        <ellipse cx="320" cy="320" rx="295" ry="285" fill="none" stroke="rgba(0,212,204,0.8)" stroke-width="1" stroke-dasharray="5 10"/>
+      </g>
+      <g class="cm-ring-mid">
+        <ellipse cx="320" cy="320" rx="215" ry="210" fill="none" stroke="rgba(0,212,204,0.9)" stroke-width="1.5" stroke-dasharray="4 7"/>
+      </g>
+      <g class="cm-ring-inner">
+        <ellipse cx="320" cy="320" rx="140" ry="138" fill="none" stroke="rgba(0,212,204,1)" stroke-width="2" stroke-dasharray="3 5"/>
+      </g>
+      <circle class="cm-core" cx="320" cy="320" r="18" fill="rgba(0,212,204,0.8)"/>
+    </svg>
+  </div>
+
+  <div class="hub-start-inner">
+    <span class="hub-label reveal">Your Starting Point</span>
+
+    <h2 class="hub-start-headline reveal reveal-d1">Before you explore. Find out what your body needs.</h2>
+
+    <div class="hub-start-body reveal reveal-d2">
+      <p>Most people do not know where their cellular health actually stands. They just know something feels off.</p>
+      <p>We built a free assessment that changes that. Thirteen questions and a personalised result that tells you exactly where your cellular systems need the most attention right now and a product recommendation built specifically around your results.</p>
+    </div>
+
+    <span class="hub-start-italic reveal reveal-d3">It is the fastest way to stop guessing and start knowing.</span>
+
+    <a href="assessment.html" class="hub-start-cta reveal reveal-d4">Your cellular blueprint</a>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 9 — WHAT WE OFFER
+═══════════════════════════════════════ -->
+<section class="hub-section hub-offer" aria-label="What we offer">
+  <div class="hub-offer-inner">
+
+    <span class="hub-label reveal">What We Offer</span>
+
+    <h2 class="hub-offer-headline reveal reveal-d1">Two ways in. One destination.</h2>
+
+    <div class="hub-offer-cards">
+
+      <!-- Card 1: Assessment -->
+      <div class="hub-offer-card reveal reveal-d1">
+        <div class="hub-offer-card-icon">
+          <img
+            src="Hub Page |Website Images/assessment-card-icon.png"
+            alt=""
+            loading="lazy"
+            onerror="this.style.display='none'"
+          >
+        </div>
+        <span class="hub-offer-card-label">Free Tool</span>
+        <h3 class="hub-offer-card-heading">Cellular Health Assessment</h3>
+        <p class="hub-offer-card-sub">Free. Personalised.</p>
+        <p class="hub-offer-card-body">Find out exactly where your cellular health stands and get a product recommendation built around your specific results.</p>
+        <a href="assessment.html" class="hub-offer-btn hub-offer-btn-primary">Start the assessment</a>
+      </div>
+
+      <!-- Card 2: OlyLife -->
+      <div class="hub-offer-card reveal reveal-d2">
+        <div class="hub-offer-card-icon">
+          <img
+            src="Hub Page |Website Images/olylife-card-icon.png"
+            alt=""
+            loading="lazy"
+            onerror="this.style.display='none'"
+          >
+        </div>
+        <span class="hub-offer-card-label">The Technology</span>
+        <h3 class="hub-offer-card-heading">OlyLife Frequency Technology</h3>
+        <p class="hub-offer-card-sub">PEMF and Terahertz devices for daily cellular health.</p>
+        <p class="hub-offer-card-body">Explore the full OlyLife product range. Every device works at the bioelectromagnetic layer where real change happens.</p>
+        <a href="olylife.html" target="_blank" rel="noopener" class="hub-offer-btn hub-offer-btn-outline">Explore OlyLife</a>
+      </div>
+
+    </div>
+
+    <p class="hub-offer-closing reveal reveal-d3">Health beyond the surface.</p>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 10 — THE CLOSE
+═══════════════════════════════════════ -->
+<section class="hub-close" aria-label="Closing">
+
+  <!-- Ambient cell rings -->
+  <div class="hub-close-membrane" aria-hidden="true">
+    <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" width="800" height="800">
+      <g class="cm-ring-outer">
+        <ellipse cx="400" cy="400" rx="370" ry="360" fill="none" stroke="rgba(0,212,204,0.7)" stroke-width="1" stroke-dasharray="6 12"/>
+      </g>
+      <g class="cm-ring-mid">
+        <ellipse cx="400" cy="400" rx="270" ry="265" fill="none" stroke="rgba(0,212,204,0.85)" stroke-width="1.5" stroke-dasharray="5 9"/>
+      </g>
+      <g class="cm-ring-inner">
+        <ellipse cx="400" cy="400" rx="175" ry="172" fill="none" stroke="rgba(0,212,204,1)" stroke-width="2" stroke-dasharray="3 6"/>
+      </g>
+      <circle class="cm-core" cx="400" cy="400" r="20" fill="rgba(0,212,204,0.7)"/>
+      <circle class="cm-wave" cx="400" cy="400" r="60" fill="none" stroke="rgba(0,212,204,0.5)" stroke-width="1"/>
+      <circle class="cm-wave" cx="400" cy="400" r="110" fill="none" stroke="rgba(0,212,204,0.3)" stroke-width="1" style="animation-delay: 1s;"/>
+    </svg>
+  </div>
+
+  <div class="hub-close-content reveal" style="transition-delay: 300ms;">
+    <h2 class="hub-close-headline">Your cells have been waiting.</h2>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer class="hub-footer" role="contentinfo">
+
+  <div class="hub-footer-main">
+    <div class="hub-footer-brand">
+      <a href="index.html" class="hub-footer-brand-row">
+        <img
+          src="Hub Page |Website Images/Cellsoures | nav-brand-mark.png"
+          alt="Cellsource"
+          class="hub-footer-brandmark"
+          loading="lazy"
+          width="28"
+          height="28"
+        >
+        <span class="hub-footer-wordmark">Cellsource</span>
+      </a>
+      <span class="hub-footer-tagline">Health beyond the surface.</span>
+    </div>
+
+    <ul class="hub-footer-links">
+      <li><a href="#science">The Science</a></li>
+      <li><a href="assessment.html">The Assessment</a></li>
+      <li><a href="olylife.html" target="_blank" rel="noopener">Explore OlyLife</a></li>
+    </ul>
+  </div>
+
+  <hr class="hub-footer-divider">
+
+  <p class="hub-footer-disclosure">
+    Cellsource is an affiliate of OlyLife. We earn a commission on purchases made through our links at no extra cost to you.
+  </p>
+
+</footer>
+
+<!-- ═══════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════ -->
+<script>
+(function () {
+  'use strict';
+
+  /* ── Cursor reactive background ── */
+  document.addEventListener('mousemove', function (e) {
+    var x = (e.clientX / window.innerWidth * 100).toFixed(1) + '%';
+    var y = (e.clientY / window.innerHeight * 100).toFixed(1) + '%';
+    var invX = (100 - parseFloat(x)).toFixed(1) + '%';
+    var invY = (100 - parseFloat(y)).toFixed(1) + '%';
+    document.documentElement.style.setProperty('--cursor-x', x);
+    document.documentElement.style.setProperty('--cursor-y', y);
+    document.documentElement.style.setProperty('--cursor-inv-x', invX);
+    document.documentElement.style.setProperty('--cursor-inv-y', invY);
+  }, { passive: true });
+
+  /* ── Floating particles ── */
+  (function () {
+    var container = document.getElementById('particles-container');
+    if (!container) return;
+    var directions = ['left', 'right', 'straight'];
+    for (var i = 0; i < 28; i++) {
+      var p = document.createElement('div');
+      var size = Math.random() * 2 + 1;
+      var dir = directions[Math.floor(Math.random() * 3)];
+      var dur = (Math.random() * 18 + 14).toFixed(1);
+      var delay = -(Math.random() * 20).toFixed(1);
+      p.style.cssText =
+        'position:absolute;bottom:-10px;left:' + (Math.random() * 100).toFixed(1) + '%;' +
+        'width:' + size + 'px;height:' + size + 'px;border-radius:50%;' +
+        'background:rgba(0,212,204,' + (Math.random() * 0.35 + 0.08).toFixed(2) + ');' +
+        'animation:particle-drift-' + dir + ' ' + dur + 's ease-in-out ' + delay + 's infinite;';
+      container.appendChild(p);
+    }
+  })();
+
+  /* ── Scroll indicator hide ── */
+  var scrollIndicator = document.querySelector('.hub-scroll-indicator');
+  if (scrollIndicator) {
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 120) {
+        scrollIndicator.classList.add('is-hidden');
+      }
+    }, { passive: true });
+  }
+
+  /* ── Navigation hamburger ── */
+  var hamburger = document.querySelector('.hub-hamburger');
+  var mobileMenu = document.querySelector('.hub-mobile-menu');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', function () {
+      var isOpen = hamburger.classList.toggle('is-open');
+      mobileMenu.classList.toggle('is-open', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        hamburger.classList.remove('is-open');
+        mobileMenu.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
+        hamburger.classList.remove('is-open');
+        mobileMenu.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  /* ── Four Beat sequence dot navigation ── */
+  var beatsTrack = document.getElementById('beatsTrack');
+  var beatsDots = document.querySelectorAll('.hub-beats-dot');
+
+  if (beatsTrack && beatsDots.length) {
+    function updateActiveDot(index) {
+      beatsDots.forEach(function (dot, i) {
+        dot.classList.toggle('is-active', i === index);
+      });
+    }
+
+    var scrollTimer;
+    beatsTrack.addEventListener('scroll', function () {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(function () {
+        var firstCard = beatsTrack.querySelector('.hub-beat-card');
+        if (!firstCard) return;
+        var cardWidth = firstCard.offsetWidth;
+        if (cardWidth === 0) return;
+        var activeIndex = Math.round(beatsTrack.scrollLeft / cardWidth);
+        updateActiveDot(activeIndex);
+      }, 50);
+    }, { passive: true });
+
+    beatsDots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        var firstCard = beatsTrack.querySelector('.hub-beat-card');
+        if (!firstCard) return;
+        var cardWidth = firstCard.offsetWidth;
+        beatsTrack.scrollTo({ left: i * cardWidth, behavior: 'smooth' });
+        updateActiveDot(i);
+      });
+    });
+  }
+
+  /* ── Intersection Observer — scroll reveal ── */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var revealObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function (el) { revealObs.observe(el); });
+  } else {
+    /* Fallback: show all immediately */
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* ── Mobile beats: IntersectionObserver to update dots ── */
+  if (beatsTrack && beatsDots.length && window.innerWidth < 768) {
+    var beatCards = beatsTrack.querySelectorAll('.hub-beat-card');
+    var beatObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var index = Array.from(beatCards).indexOf(entry.target);
+          if (index > -1) updateActiveDot(index);
+        }
+      });
+    }, { threshold: 0.5 });
+    beatCards.forEach(function (card) { beatObs.observe(card); });
+  }
+
+})();
+</script>
+
+</body>
+</html>
