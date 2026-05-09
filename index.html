@@ -6,17 +6,10 @@
   <title>Cellsource — Health Beyond the Surface</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles copy.css">
 </head>
 <body>
-
-<!-- ═══════════════════════════════════════
-     AMBIENT BACKGROUND (cursor-reactive)
-═══════════════════════════════════════ -->
-<div class="bg-cursor-teal"></div>
-<div class="bg-cursor-gold"></div>
-<div id="particles-container"></div>
 
 <!-- ═══════════════════════════════════════
      NAVIGATION
@@ -71,13 +64,19 @@
   <div class="hub-hero-grain"></div>
 
   <div class="hub-hero-content">
-    <span class="hub-hero-label">Cellsource</span>
 
     <h1 class="hub-hero-headline">Health beyond the surface.</h1>
 
-    <p class="hub-hero-sub">The frequency layer of health that some never reach. This is where we begin.</p>
+    <p class="hub-hero-sub">
+      <span class="hub-hero-sub-first">The frequency layer of health that some never reach.</span>
+      <span class="hub-hero-sub-second">This is where we begin.</span>
+    </p>
 
-    <a href="assessment.html" class="hub-hero-cta">Find your cellular pattern — it is free</a>
+    <a href="assessment.html" class="hub-hero-cta-link">
+      <span class="hub-hero-cta-label">Find your cellular pattern <span class="hub-hero-cta-chevron">→</span></span>
+      <span class="hub-hero-cta-underline"></span>
+    </a>
+
   </div>
 
   <div class="hub-scroll-indicator" aria-hidden="true">
@@ -104,7 +103,7 @@
       <span class="hub-ticker-phrase">Health Beyond the Surface</span>
       <span class="hub-ticker-sep"></span>
     </div>
-    <!-- Group 2 (duplicate for seamless loop) -->
+    <!-- Group 2 — exact duplicate for seamless loop -->
     <div class="hub-ticker-group" aria-hidden="true">
       <span class="hub-ticker-phrase">Cellsource</span>
       <span class="hub-ticker-sep"></span>
@@ -122,48 +121,51 @@
      SECTION 2 — THE REALITY CHECK
 ═══════════════════════════════════════ -->
 <section class="hub-section hub-reality" aria-label="The Reality Check">
-  <div class="hub-reality-grid">
+  <div class="hub-section-inner">
 
-    <!-- Left: Copy -->
-    <div class="hub-reality-copy reveal">
-      <span class="hub-label">The Reality Check</span>
+    <h2 class="hub-reality-headline-above reveal">You are doing everything right. And something still feels off.</h2>
 
-      <h2 class="hub-reality-headline">You are doing everything right. And something still feels off.</h2>
+    <div class="hub-reality-cols">
 
-      <div class="hub-reality-boxes">
-        <div class="hub-reality-box">
-          <span class="hub-reality-box-num">01</span>
-          <span class="hub-reality-box-text">Your energy does not hold the way it should.</span>
+      <!-- Left: Copy -->
+      <div class="hub-reality-copy reveal reveal-d1">
+        <span class="hub-label">The Reality Check</span>
+
+        <div class="hub-reality-boxes">
+          <div class="hub-reality-box">
+            <span class="hub-reality-box-num">01</span>
+            <span class="hub-reality-box-text">Your energy does not hold the way it should.</span>
+          </div>
+          <div class="hub-reality-box">
+            <span class="hub-reality-box-num">02</span>
+            <span class="hub-reality-box-text">You push through the day but the tank never feels full.</span>
+          </div>
+          <div class="hub-reality-box">
+            <span class="hub-reality-box-num">03</span>
+            <span class="hub-reality-box-text">Focus, clarity and drive are there one day and gone the next.</span>
+          </div>
         </div>
-        <div class="hub-reality-box">
-          <span class="hub-reality-box-num">02</span>
-          <span class="hub-reality-box-text">You push through the day but the tank never feels full.</span>
-        </div>
-        <div class="hub-reality-box">
-          <span class="hub-reality-box-num">03</span>
-          <span class="hub-reality-box-text">Focus, clarity and drive are there one day and gone the next.</span>
+
+        <div class="hub-reality-body">
+          <p>You eat well. You take the supplements. You have done the work and you are proud of it.</p>
+          <p>But there is this feeling. A ceiling you keep hitting. Energy that does not quite hold. Recovery that takes longer. A sharpness that comes and goes without explanation.</p>
+          <p>You are not going backwards. You have just never been shown the layer beneath it all.</p>
         </div>
       </div>
 
-      <div class="hub-reality-body">
-        <p>You eat well. You take the supplements. You have done the work and you are proud of it.</p>
-        <p>But there is this feeling. A ceiling you keep hitting. Energy that does not quite hold. Recovery that takes longer. A sharpness that comes and goes without explanation.</p>
-        <p>You are not going backwards. You have just never been shown the layer beneath it all.</p>
+      <!-- Right: Image -->
+      <div class="hub-reality-image-wrap reveal reveal-d2">
+        <img
+          src="Hub Page |Website Images/Cellsoures | visual-2-macro.png"
+          alt="Cellular health visualised"
+          class="hub-reality-image"
+          loading="lazy"
+          width="600"
+          height="700"
+        >
       </div>
-    </div>
 
-    <!-- Right: Image -->
-    <div class="hub-reality-image-wrap reveal reveal-d2">
-      <img
-        src="Hub Page |Website Images/Cellsoures | visual-2-macro.png"
-        alt="Cellular health visualised"
-        class="hub-reality-image"
-        loading="lazy"
-        width="600"
-        height="700"
-      >
     </div>
-
   </div>
 </section>
 
@@ -177,8 +179,8 @@
     alt=""
     class="hub-quote-symbol reveal"
     loading="lazy"
-    width="80"
-    height="80"
+    width="120"
+    height="120"
     aria-hidden="true"
   >
 
@@ -210,70 +212,110 @@
 </section>
 
 <!-- ═══════════════════════════════════════
-     FOUR BEAT VISUAL SEQUENCE
+     THE SCIENCE — VERTICAL STEPS
 ═══════════════════════════════════════ -->
 <section class="hub-beats" aria-label="How frequency technology works">
 
-  <div class="hub-beats-header">
+  <div class="hub-beats-header-wrap">
     <span class="hub-label reveal">The Science</span>
     <h2 class="hub-beats-title reveal reveal-d1">How frequency technology works.</h2>
     <p class="hub-beats-sub reveal reveal-d2">Four beats. The complete picture.</p>
   </div>
 
-  <div class="hub-beats-track" id="beatsTrack" role="region" aria-label="Four beat sequence">
+  <div class="hub-beats-steps">
 
-    <!-- Beat 1 -->
-    <article class="hub-beat-card" aria-label="Beat 1: The Problem">
-      <div class="hub-beat-bg" style="background-image: url('Hub Page |Website Images/Cellsoures |  beat-1-charged-depleted.png');"></div>
-      <div class="hub-beat-overlay"></div>
-      <div class="hub-beat-copy">
-        <span class="hub-beat-label">The Problem</span>
-        <h3 class="hub-beat-headline">Your cells run on charge. When it drops, everything does.</h3>
-        <p class="hub-beat-body">Every symptom traces back to the same source.</p>
+    <!-- Beat 1: num | image | copy -->
+    <div class="hub-beat-row hub-beat-row-odd reveal">
+      <div class="hub-beat-row-divider"></div>
+      <div class="hub-beat-row-inner">
+        <div class="hub-beat-row-num">01</div>
+        <div class="hub-beat-row-image">
+          <img
+            src="Hub Page |Website Images/Cellsoures |  beat-1-charged-depleted.png"
+            alt="Charged vs depleted cells"
+            loading="lazy"
+            width="320"
+            height="220"
+          >
+        </div>
+        <div class="hub-beat-row-copy">
+          <span class="hub-beat-label">The Problem</span>
+          <h3 class="hub-beat-headline">Your cells run on charge. When it drops, everything does.</h3>
+          <p class="hub-beat-body">Every symptom traces back to the same source.</p>
+        </div>
       </div>
-    </article>
+    </div>
 
-    <!-- Beat 2 -->
-    <article class="hub-beat-card" aria-label="Beat 2: The Gap">
-      <div class="hub-beat-bg" style="background-image: url('Hub Page |Website Images/Cellsoures | beat-2-inputs-blocked.png');"></div>
-      <div class="hub-beat-overlay"></div>
-      <div class="hub-beat-copy">
-        <span class="hub-beat-label">The Gap</span>
-        <h3 class="hub-beat-headline">The right inputs. The wrong layer.</h3>
-        <p class="hub-beat-body">Food, supplements and sleep matter. But none of them reach here.</p>
+    <!-- Beat 2: num | copy | image -->
+    <div class="hub-beat-row hub-beat-row-even reveal reveal-d1">
+      <div class="hub-beat-row-divider"></div>
+      <div class="hub-beat-row-inner">
+        <div class="hub-beat-row-num">02</div>
+        <div class="hub-beat-row-image">
+          <img
+            src="Hub Page |Website Images/Cellsoures | beat-2-inputs-blocked.png"
+            alt="Inputs blocked at cellular level"
+            loading="lazy"
+            width="320"
+            height="220"
+          >
+        </div>
+        <div class="hub-beat-row-copy">
+          <span class="hub-beat-label">The Gap</span>
+          <h3 class="hub-beat-headline">The right inputs. The wrong layer.</h3>
+          <p class="hub-beat-body">Food, supplements and sleep matter. But none of them reach here.</p>
+        </div>
       </div>
-    </article>
+    </div>
 
-    <!-- Beat 3 -->
-    <article class="hub-beat-card" aria-label="Beat 3: The Shift">
-      <div class="hub-beat-bg" style="background-image: url('Hub Page |Website Images/Cellsoures |  beat-3-frequency-arrives.png');"></div>
-      <div class="hub-beat-overlay"></div>
-      <div class="hub-beat-copy">
-        <span class="hub-beat-label">The Shift</span>
-        <h3 class="hub-beat-headline">Frequency reaches where nothing else does.</h3>
-        <p class="hub-beat-body">PEMF and Terahertz waves work at the bioelectromagnetic layer your cells actually run on.</p>
+    <!-- Beat 3: num | image | copy -->
+    <div class="hub-beat-row hub-beat-row-odd reveal reveal-d1">
+      <div class="hub-beat-row-divider"></div>
+      <div class="hub-beat-row-inner">
+        <div class="hub-beat-row-num">03</div>
+        <div class="hub-beat-row-image">
+          <img
+            src="Hub Page |Website Images/Cellsoures |  beat-3-frequency-arrives.png"
+            alt="Frequency arriving at cellular level"
+            loading="lazy"
+            width="320"
+            height="220"
+          >
+        </div>
+        <div class="hub-beat-row-copy">
+          <span class="hub-beat-label">The Shift</span>
+          <h3 class="hub-beat-headline">Frequency reaches where nothing else does.</h3>
+          <p class="hub-beat-body">PEMF and Terahertz waves work at the bioelectromagnetic layer your cells actually run on.</p>
+        </div>
       </div>
-    </article>
+    </div>
 
-    <!-- Beat 4 -->
-    <article class="hub-beat-card" aria-label="Beat 4: The Result">
-      <div class="hub-beat-bg" style="background-image: url('Hub Page |Website Images/Cellsoures | beat-4-fully-charged.png .png');"></div>
-      <div class="hub-beat-overlay"></div>
-      <div class="hub-beat-copy">
-        <span class="hub-beat-label">The Result</span>
-        <h3 class="hub-beat-headline">Everything it powers.</h3>
-        <p class="hub-beat-body">Energy. Clarity. Recovery. Sleep. All of it flows from the same charged source.</p>
+    <!-- Beat 4: num | copy | image -->
+    <div class="hub-beat-row hub-beat-row-even reveal reveal-d2">
+      <div class="hub-beat-row-divider"></div>
+      <div class="hub-beat-row-inner">
+        <div class="hub-beat-row-num">04</div>
+        <div class="hub-beat-row-image">
+          <img
+            src="Hub Page |Website Images/Cellsoures | beat-4-fully-charged.png .png"
+            alt="Fully charged cells"
+            loading="lazy"
+            width="320"
+            height="220"
+          >
+        </div>
+        <div class="hub-beat-row-copy">
+          <span class="hub-beat-label">The Result</span>
+          <h3 class="hub-beat-headline">Everything it powers.</h3>
+          <p class="hub-beat-body">Energy. Clarity. Recovery. Sleep. All of it flows from the same charged source.</p>
+        </div>
       </div>
-    </article>
+    </div>
+
+    <!-- Final divider -->
+    <div class="hub-beat-row-divider"></div>
 
   </div>
-
-  <nav class="hub-beats-nav" aria-label="Beat navigation">
-    <button class="hub-beats-dot is-active" data-beat="0" aria-label="Beat 1">01</button>
-    <button class="hub-beats-dot" data-beat="1" aria-label="Beat 2">02</button>
-    <button class="hub-beats-dot" data-beat="2" aria-label="Beat 3">03</button>
-    <button class="hub-beats-dot" data-beat="3" aria-label="Beat 4">04</button>
-  </nav>
 
 </section>
 
@@ -281,9 +323,6 @@
      SECTION 4 — THE TECHNOLOGY
 ═══════════════════════════════════════ -->
 <section class="hub-tech" aria-label="The Technology">
-
-  <div class="hub-tech-bg" style="background-image: url('Hub Page |Website Images/Cellsoures | technology-atmospheric.png');"></div>
-  <div class="hub-tech-overlay"></div>
 
   <div class="hub-tech-content">
     <span class="hub-label reveal">The Technology</span>
@@ -309,19 +348,19 @@
 <!-- ═══════════════════════════════════════
      QUOTE MOMENT 3
 ═══════════════════════════════════════ -->
-<section class="hub-quote-moment" aria-label="Quote">
+<section class="hub-quote-moment hub-quote-moment-3" aria-label="Quote">
 
   <img
     src="Hub Page |Website Images/Cellsoures | quote-symbol-2.png"
     alt=""
-    class="hub-quote-symbol reveal"
+    class="hub-quote-symbol hub-qm-3-symbol reveal"
     loading="lazy"
-    width="80"
-    height="80"
+    width="120"
+    height="120"
     aria-hidden="true"
   >
 
-  <p class="hub-qm-single reveal reveal-d1">"Are you ready to go deeper"</p>
+  <p class="hub-qm-3-text reveal reveal-d1">"Are you ready to go deeper"</p>
 
 </section>
 
@@ -329,53 +368,45 @@
      SECTION 5 — WHAT IS CELLSOURCE
 ═══════════════════════════════════════ -->
 <section class="hub-section hub-brand" aria-label="What is Cellsource">
-  <div class="hub-brand-grid">
+  <div class="hub-section-inner">
 
-    <!-- Left: Copy -->
-    <div class="hub-brand-copy reveal">
+    <!-- Full-width heading -->
+    <div class="hub-brand-heading-wrap reveal">
       <span class="hub-label">The Brand</span>
-
-      <h2 class="hub-brand-headline">
-        What is<br>
-        <span class="teal-italic">Cellsource?</span>
-      </h2>
-
-      <div class="hub-brand-arrows">
-        <div class="hub-brand-arrow-item">
-          <span class="hub-brand-arrow">→</span>
-          <span class="hub-brand-arrow-text">you become someone who understands their health at the deepest level</span>
-        </div>
-        <div class="hub-brand-arrow-item">
-          <span class="hub-brand-arrow">→</span>
-          <span class="hub-brand-arrow-text">your perspective on what health is might shift</span>
-        </div>
-        <div class="hub-brand-arrow-item">
-          <span class="hub-brand-arrow">→</span>
-          <span class="hub-brand-arrow-text">you discover a layer of health that most people never know exists</span>
-        </div>
-      </div>
-
-      <p class="hub-brand-closing">health beyond the surface becomes your reality</p>
+      <h2 class="hub-brand-main-heading">What is <span class="teal-italic">Cellsource?</span></h2>
     </div>
 
-    <!-- Right: Visual placeholder -->
-    <div class="hub-brand-visual reveal reveal-d2" aria-hidden="true">
-      <div class="hub-brand-visual-membrane">
-        <svg class="cell-membrane-svg" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <g class="cm-ring-outer">
-            <ellipse cx="320" cy="320" rx="295" ry="285" fill="none" stroke="rgba(0,212,204,0.18)" stroke-width="1" stroke-dasharray="5 10"/>
-          </g>
-          <g class="cm-ring-mid">
-            <ellipse cx="320" cy="320" rx="215" ry="210" fill="none" stroke="rgba(0,212,204,0.28)" stroke-width="1.5" stroke-dasharray="4 7"/>
-          </g>
-          <g class="cm-ring-inner">
-            <ellipse cx="320" cy="320" rx="140" ry="138" fill="none" stroke="rgba(0,212,204,0.45)" stroke-width="2" stroke-dasharray="3 5"/>
-          </g>
-          <circle class="cm-core" cx="320" cy="320" r="14" fill="rgba(0,212,204,0.55)"/>
-          <circle class="cm-wave" cx="320" cy="320" r="50" fill="none" stroke="rgba(0,212,204,0.2)" stroke-width="1"/>
-          <circle class="cm-wave" cx="320" cy="320" r="85" fill="none" stroke="rgba(0,212,204,0.12)" stroke-width="1" style="animation-delay: 0.8s;"/>
-        </svg>
+    <!-- Two columns -->
+    <div class="hub-brand-cols">
+
+      <!-- Left: editorial accent lines -->
+      <div class="hub-brand-left reveal reveal-d1">
+        <div class="hub-brand-editorial-lines">
+          <div class="hub-brand-editorial-line">
+            <p class="hub-brand-editorial-text">you become someone who understands their health at the deepest level</p>
+          </div>
+          <div class="hub-brand-editorial-line">
+            <p class="hub-brand-editorial-text">your perspective on what health is might shift</p>
+          </div>
+          <div class="hub-brand-editorial-line">
+            <p class="hub-brand-editorial-text">you discover a layer of health that most people never know exists</p>
+          </div>
+        </div>
+        <p class="hub-brand-closing">health beyond the surface becomes your reality</p>
       </div>
+
+      <!-- Right: technology atmospheric image -->
+      <div class="hub-brand-right reveal reveal-d2">
+        <img
+          src="Hub Page |Website Images/Cellsoures | technology-atmospheric.png"
+          alt="Frequency technology"
+          class="hub-brand-tech-image"
+          loading="lazy"
+          width="600"
+          height="400"
+        >
+      </div>
+
     </div>
 
   </div>
@@ -389,24 +420,31 @@
 
     <span class="hub-label reveal">This Is For You</span>
 
-    <h2 class="hub-audience-headline reveal reveal-d1">You already know something is missing. This is for the ones ready to find it.</h2>
+    <h2 class="hub-audience-headline reveal reveal-d1">
+      <span class="hub-audience-h-part1">You already know something is missing.</span>
+      <span class="hub-audience-h-part2">This is for the ones ready to find it.</span>
+    </h2>
 
-    <div class="hub-audience-boxes">
-      <div class="hub-audience-box reveal reveal-d1">
-        <span class="hub-audience-num">01</span>
-        <p class="hub-audience-text">You do everything for your health and still feel like you are operating below your potential.</p>
+    <div class="hub-audience-rows">
+      <div class="hub-audience-row reveal reveal-d1">
+        <span class="hub-audience-row-num">01</span>
+        <p class="hub-audience-row-text">You do everything for your health and still feel like you are operating below your potential.</p>
       </div>
-      <div class="hub-audience-box reveal reveal-d2">
-        <span class="hub-audience-num">02</span>
-        <p class="hub-audience-text">You are not interested in the generic. You want to go deeper, understand more and feel the difference.</p>
+      <div class="hub-audience-row reveal reveal-d2">
+        <span class="hub-audience-row-num">02</span>
+        <p class="hub-audience-row-text">You are not interested in the generic. You want to go deeper, understand more and feel the difference.</p>
       </div>
-      <div class="hub-audience-box reveal reveal-d3">
-        <span class="hub-audience-num">03</span>
-        <p class="hub-audience-text">You have tried the diets, the supplements, the routines. And you are ready to go deeper.</p>
+      <div class="hub-audience-row reveal reveal-d3">
+        <span class="hub-audience-row-num">03</span>
+        <p class="hub-audience-row-text">You have tried the diets, the supplements, the routines. And you are ready to go deeper.</p>
       </div>
     </div>
 
-    <p class="hub-audience-closing reveal reveal-d4">For the health obsessed. The biohackers. The ones who refuse to accept average.</p>
+    <div class="hub-audience-statement reveal reveal-d4">
+      <p class="hub-audience-stmt-1">For the health obsessed.</p>
+      <p class="hub-audience-stmt-2">The biohackers.</p>
+      <p class="hub-audience-stmt-3">The ones who refuse to accept average.</p>
+    </div>
 
   </div>
 </section>
@@ -417,7 +455,7 @@
 <section class="hub-social" aria-label="Real Experiences">
   <div class="hub-social-inner">
 
-    <span class="hub-label" style="text-align:center; display:block;" class="reveal">Real Experiences</span>
+    <span class="hub-label reveal" style="text-align:center; display:block;">Real Experiences</span>
 
     <h2 class="hub-social-headline reveal reveal-d1">What shifts when you reach the cellular layer.</h2>
 
@@ -467,7 +505,10 @@
 
     </div>
 
-    <p class="hub-social-closing reveal">These are real people. Real shifts. The cellular layer was always there.</p>
+    <div class="hub-social-closing-block reveal">
+      <p class="hub-social-close-1">These are real people. Real shifts.</p>
+      <p class="hub-social-close-2">The cellular layer was always there.</p>
+    </div>
 
   </div>
 </section>
@@ -476,38 +517,22 @@
      SECTION 8 — YOUR STARTING POINT
 ═══════════════════════════════════════ -->
 <section class="hub-section hub-start" aria-label="Your Starting Point">
-
-  <!-- Ambient cell rings -->
-  <div class="hub-start-membrane" aria-hidden="true">
-    <svg viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg" width="640" height="640">
-      <g class="cm-ring-outer">
-        <ellipse cx="320" cy="320" rx="295" ry="285" fill="none" stroke="rgba(0,212,204,0.8)" stroke-width="1" stroke-dasharray="5 10"/>
-      </g>
-      <g class="cm-ring-mid">
-        <ellipse cx="320" cy="320" rx="215" ry="210" fill="none" stroke="rgba(0,212,204,0.9)" stroke-width="1.5" stroke-dasharray="4 7"/>
-      </g>
-      <g class="cm-ring-inner">
-        <ellipse cx="320" cy="320" rx="140" ry="138" fill="none" stroke="rgba(0,212,204,1)" stroke-width="2" stroke-dasharray="3 5"/>
-      </g>
-      <circle class="cm-core" cx="320" cy="320" r="18" fill="rgba(0,212,204,0.8)"/>
-    </svg>
-  </div>
-
   <div class="hub-start-inner">
+
     <span class="hub-label reveal">Your Starting Point</span>
 
     <h2 class="hub-start-headline reveal reveal-d1">Before you explore. Find out what your body needs.</h2>
 
     <div class="hub-start-body reveal reveal-d2">
       <p>Most people do not know where their cellular health actually stands. They just know something feels off.</p>
-      <p>We built a free assessment that changes that. Thirteen questions and a personalised result that tells you exactly where your cellular systems need the most attention right now and a product recommendation built specifically around your results.</p>
+      <p>We built a free assessment that changes that. <span class="hub-teal-highlight">Thirteen questions</span> and a <span class="hub-teal-highlight">personalised result</span> that tells you exactly where your cellular systems need the most attention right now and a <span class="hub-teal-highlight">product recommendation</span> built specifically around your results.</p>
     </div>
 
-    <span class="hub-start-italic reveal reveal-d3">It is the fastest way to stop guessing and start knowing.</span>
+    <span class="hub-start-italic hub-start-italic-teal reveal reveal-d3">It is the fastest way to stop guessing and start knowing.</span>
 
-    <a href="assessment.html" class="hub-start-cta reveal reveal-d4">Your cellular blueprint</a>
+    <a href="assessment.html" class="hub-start-cta hub-start-cta-spaced reveal reveal-d4">Your cellular blueprint</a>
+
   </div>
-
 </section>
 
 <!-- ═══════════════════════════════════════
@@ -535,7 +560,7 @@
         <span class="hub-offer-card-label">Free Tool</span>
         <h3 class="hub-offer-card-heading">Cellular Health Assessment</h3>
         <p class="hub-offer-card-sub">Free. Personalised.</p>
-        <p class="hub-offer-card-body">Find out exactly where your cellular health stands and get a product recommendation built around your specific results.</p>
+        <p class="hub-offer-card-body">Find out exactly where your cellular health stands and get a <span class="hub-teal-highlight">product recommendation</span> built around your specific results.</p>
         <a href="assessment.html" class="hub-offer-btn hub-offer-btn-primary">Start the assessment</a>
       </div>
 
@@ -552,13 +577,13 @@
         <span class="hub-offer-card-label">The Technology</span>
         <h3 class="hub-offer-card-heading">OlyLife Frequency Technology</h3>
         <p class="hub-offer-card-sub">PEMF and Terahertz devices for daily cellular health.</p>
-        <p class="hub-offer-card-body">Explore the full OlyLife product range. Every device works at the bioelectromagnetic layer where real change happens.</p>
+        <p class="hub-offer-card-body">Explore the full OlyLife product range. Every device works at the <span class="hub-teal-highlight">bioelectromagnetic layer</span> where real change happens.</p>
         <a href="olylife.html" target="_blank" rel="noopener" class="hub-offer-btn hub-offer-btn-outline">Explore OlyLife</a>
       </div>
 
     </div>
 
-    <p class="hub-offer-closing reveal reveal-d3">Health beyond the surface.</p>
+    <p class="hub-offer-closing hub-offer-closing-v2 reveal reveal-d3">Health beyond the surface.</p>
 
   </div>
 </section>
@@ -567,29 +592,10 @@
      SECTION 10 — THE CLOSE
 ═══════════════════════════════════════ -->
 <section class="hub-close" aria-label="Closing">
-
-  <!-- Ambient cell rings -->
-  <div class="hub-close-membrane" aria-hidden="true">
-    <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" width="800" height="800">
-      <g class="cm-ring-outer">
-        <ellipse cx="400" cy="400" rx="370" ry="360" fill="none" stroke="rgba(0,212,204,0.7)" stroke-width="1" stroke-dasharray="6 12"/>
-      </g>
-      <g class="cm-ring-mid">
-        <ellipse cx="400" cy="400" rx="270" ry="265" fill="none" stroke="rgba(0,212,204,0.85)" stroke-width="1.5" stroke-dasharray="5 9"/>
-      </g>
-      <g class="cm-ring-inner">
-        <ellipse cx="400" cy="400" rx="175" ry="172" fill="none" stroke="rgba(0,212,204,1)" stroke-width="2" stroke-dasharray="3 6"/>
-      </g>
-      <circle class="cm-core" cx="400" cy="400" r="20" fill="rgba(0,212,204,0.7)"/>
-      <circle class="cm-wave" cx="400" cy="400" r="60" fill="none" stroke="rgba(0,212,204,0.5)" stroke-width="1"/>
-      <circle class="cm-wave" cx="400" cy="400" r="110" fill="none" stroke="rgba(0,212,204,0.3)" stroke-width="1" style="animation-delay: 1s;"/>
-    </svg>
-  </div>
-
   <div class="hub-close-content reveal" style="transition-delay: 300ms;">
-    <h2 class="hub-close-headline">Your cells have been waiting.</h2>
+    <p class="hub-close-line-1">Health beyond the surface.</p>
+    <p class="hub-close-line-2">Your cells have been waiting.</p>
   </div>
-
 </section>
 
 <!-- ═══════════════════════════════════════
@@ -635,38 +641,6 @@
 (function () {
   'use strict';
 
-  /* ── Cursor reactive background ── */
-  document.addEventListener('mousemove', function (e) {
-    var x = (e.clientX / window.innerWidth * 100).toFixed(1) + '%';
-    var y = (e.clientY / window.innerHeight * 100).toFixed(1) + '%';
-    var invX = (100 - parseFloat(x)).toFixed(1) + '%';
-    var invY = (100 - parseFloat(y)).toFixed(1) + '%';
-    document.documentElement.style.setProperty('--cursor-x', x);
-    document.documentElement.style.setProperty('--cursor-y', y);
-    document.documentElement.style.setProperty('--cursor-inv-x', invX);
-    document.documentElement.style.setProperty('--cursor-inv-y', invY);
-  }, { passive: true });
-
-  /* ── Floating particles ── */
-  (function () {
-    var container = document.getElementById('particles-container');
-    if (!container) return;
-    var directions = ['left', 'right', 'straight'];
-    for (var i = 0; i < 28; i++) {
-      var p = document.createElement('div');
-      var size = Math.random() * 2 + 1;
-      var dir = directions[Math.floor(Math.random() * 3)];
-      var dur = (Math.random() * 18 + 14).toFixed(1);
-      var delay = -(Math.random() * 20).toFixed(1);
-      p.style.cssText =
-        'position:absolute;bottom:-10px;left:' + (Math.random() * 100).toFixed(1) + '%;' +
-        'width:' + size + 'px;height:' + size + 'px;border-radius:50%;' +
-        'background:rgba(0,212,204,' + (Math.random() * 0.35 + 0.08).toFixed(2) + ');' +
-        'animation:particle-drift-' + dir + ' ' + dur + 's ease-in-out ' + delay + 's infinite;';
-      container.appendChild(p);
-    }
-  })();
-
   /* ── Scroll indicator hide ── */
   var scrollIndicator = document.querySelector('.hub-scroll-indicator');
   if (scrollIndicator) {
@@ -705,41 +679,6 @@
     });
   }
 
-  /* ── Four Beat sequence dot navigation ── */
-  var beatsTrack = document.getElementById('beatsTrack');
-  var beatsDots = document.querySelectorAll('.hub-beats-dot');
-
-  if (beatsTrack && beatsDots.length) {
-    function updateActiveDot(index) {
-      beatsDots.forEach(function (dot, i) {
-        dot.classList.toggle('is-active', i === index);
-      });
-    }
-
-    var scrollTimer;
-    beatsTrack.addEventListener('scroll', function () {
-      clearTimeout(scrollTimer);
-      scrollTimer = setTimeout(function () {
-        var firstCard = beatsTrack.querySelector('.hub-beat-card');
-        if (!firstCard) return;
-        var cardWidth = firstCard.offsetWidth;
-        if (cardWidth === 0) return;
-        var activeIndex = Math.round(beatsTrack.scrollLeft / cardWidth);
-        updateActiveDot(activeIndex);
-      }, 50);
-    }, { passive: true });
-
-    beatsDots.forEach(function (dot, i) {
-      dot.addEventListener('click', function () {
-        var firstCard = beatsTrack.querySelector('.hub-beat-card');
-        if (!firstCard) return;
-        var cardWidth = firstCard.offsetWidth;
-        beatsTrack.scrollTo({ left: i * cardWidth, behavior: 'smooth' });
-        updateActiveDot(i);
-      });
-    });
-  }
-
   /* ── Intersection Observer — scroll reveal ── */
   var revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
@@ -753,22 +692,7 @@
     }, { threshold: 0.15 });
     revealEls.forEach(function (el) { revealObs.observe(el); });
   } else {
-    /* Fallback: show all immediately */
     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
-  }
-
-  /* ── Mobile beats: IntersectionObserver to update dots ── */
-  if (beatsTrack && beatsDots.length && window.innerWidth < 768) {
-    var beatCards = beatsTrack.querySelectorAll('.hub-beat-card');
-    var beatObs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var index = Array.from(beatCards).indexOf(entry.target);
-          if (index > -1) updateActiveDot(index);
-        }
-      });
-    }, { threshold: 0.5 });
-    beatCards.forEach(function (card) { beatObs.observe(card); });
   }
 
 })();

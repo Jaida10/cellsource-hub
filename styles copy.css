@@ -3284,3 +3284,601 @@ button[type="submit"] span, button[type="submit"] {
     height: 32px;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   REFINEMENTS v2 — all overrides applied in one pass
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── G1/G2: Kill particles and cursor glow ── */
+#particles-container { display: none !important; }
+.bg-cursor-teal,
+.bg-cursor-gold { display: none !important; }
+
+/* ── G3/G4: Clean backgrounds on Start + Close ── */
+.hub-start-membrane,
+.hub-close-membrane { display: none !important; }
+.hub-start { background: var(--navy-deep); }
+.hub-close  { background: var(--navy-deep); }
+
+/* ─────────────────────────────────────────
+   1B/1C: Hero content positioning + atmosphere
+───────────────────────────────────────── */
+.hub-hero-content {
+  width: 100%;
+  max-width: 620px;
+  padding: 88px clamp(24px, 9%, 140px) 80px;
+}
+.hub-hero-atmosphere {
+  background:
+    linear-gradient(to right,
+      rgba(11,20,38,1.00)  0%,
+      rgba(11,20,38,0.98) 18%,
+      rgba(11,20,38,0.88) 32%,
+      rgba(11,20,38,0.55) 50%,
+      rgba(11,20,38,0.12) 72%,
+      transparent 100%
+    ),
+    radial-gradient(ellipse 130% 70% at 50% 110%, rgba(0,30,60,0.85) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at -8% 0%, rgba(0,212,204,0.05) 0%, transparent 65%);
+}
+.hub-hero-bg {
+  background-position: 78% center;
+}
+
+/* ── 1A: Remove label — already gone from HTML ── */
+
+/* ── 1D: Hero headline 80px weight 500 ── */
+.hub-hero-headline {
+  font-size: clamp(48px, 6.2vw, 80px);
+  font-weight: 500;
+  line-height: 1.05;
+  margin-bottom: 28px;
+}
+
+/* ── 1E: Hero sub split spans ── */
+.hub-hero-sub {
+  /* keep existing opacity/animation — just remove font rules so spans control */
+  font-size: inherit;
+  color: inherit;
+}
+.hub-hero-sub-first {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(16px, 1.6vw, 22px);
+  color: var(--soft-silver);
+  display: block;
+  line-height: 1.55;
+}
+.hub-hero-sub-second {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(16px, 1.6vw, 22px);
+  color: var(--teal-primary);
+  font-weight: 600;
+  display: block;
+  margin-top: 8px;
+  line-height: 1.55;
+}
+
+/* ── 1F: Editorial text-link CTA ── */
+.hub-hero-cta-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  opacity: 0;
+  animation: element-enter 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 600ms forwards;
+  gap: 8px;
+  margin-top: 8px;
+}
+.hub-hero-cta-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--bone-white);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.35s ease;
+  line-height: 1.3;
+}
+.hub-hero-cta-chevron {
+  font-style: normal;
+  color: var(--teal-primary);
+  font-size: 20px;
+  transition: transform 0.35s ease;
+}
+.hub-hero-cta-underline {
+  display: block;
+  width: 120px;
+  height: 2px;
+  background: var(--teal-primary);
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.hub-hero-cta-link:hover .hub-hero-cta-label {
+  color: var(--teal-primary);
+}
+.hub-hero-cta-link:hover .hub-hero-cta-chevron {
+  transform: translateX(4px);
+}
+.hub-hero-cta-link:hover .hub-hero-cta-underline {
+  width: 100%;
+}
+
+/* ─────────────────────────────────────────
+   2A: Ticker — 20 s seamless loop
+───────────────────────────────────────── */
+.hub-ticker-track {
+  animation-duration: 20s;
+  animation-timing-function: linear;
+}
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ─────────────────────────────────────────
+   3A: Reality Check headline above columns
+───────────────────────────────────────── */
+.hub-reality-headline-above {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(32px, 3.8vw, 56px);
+  color: var(--bone-white);
+  line-height: 1.2;
+  margin-bottom: 56px;
+  max-width: 100%;
+}
+/* New reality cols layout — replaces hub-reality-grid */
+.hub-reality-cols {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 420px);
+  gap: 60px;
+  align-items: start;
+}
+.hub-reality-copy {
+  max-width: 100%;
+}
+/* 3B: Image constraint already via minmax(auto,420px) — enforce on image too */
+.hub-reality-image-wrap {
+  max-width: 420px;
+}
+.hub-reality-image {
+  border-radius: 12px;
+}
+
+@media (max-width: 767px) {
+  .hub-reality-cols {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .hub-reality-image-wrap {
+    max-width: 100%;
+  }
+}
+
+/* ─────────────────────────────────────────
+   4A/4B: Quote Moment 1 — icon + text sizes
+───────────────────────────────────────── */
+.hub-quote-symbol {
+  width: 120px;
+  height: auto;
+  margin-bottom: 40px;
+}
+.hub-qm-line-1 {
+  font-size: 28px;
+  font-weight: 400;
+}
+.hub-qm-line-2 {
+  font-size: clamp(48px, 6vw, 72px);
+  font-weight: 600;
+}
+.hub-qm-line-3 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+/* ─────────────────────────────────────────
+   5A: The Layer headline — 60px weight 500
+───────────────────────────────────────── */
+.hub-layer-headline {
+  font-size: clamp(40px, 4.5vw, 60px);
+  font-weight: 500;
+}
+
+/* ─────────────────────────────────────────
+   THE SCIENCE — vertical steps layout
+───────────────────────────────────────── */
+.hub-beats-header-wrap {
+  text-align: center;
+  padding: 0 clamp(24px, 6vw, 100px);
+  margin-bottom: 64px;
+}
+.hub-beats-steps {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 6vw, 100px);
+}
+.hub-beat-row-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 212, 204, 0.10);
+}
+.hub-beat-row-inner {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 64px 0;
+}
+.hub-beat-row-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 48px;
+  color: var(--teal-primary);
+  font-weight: 400;
+  flex-shrink: 0;
+  width: 72px;
+  order: 1;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.hub-beat-row-image {
+  flex: 0 0 320px;
+  order: 2;
+}
+.hub-beat-row-image img {
+  width: 320px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 212, 204, 0.30);
+  display: block;
+}
+.hub-beat-row-copy {
+  flex: 1;
+  order: 3;
+}
+/* Even rows: swap image to right, copy to centre */
+.hub-beat-row-even .hub-beat-row-image { order: 3; }
+.hub-beat-row-even .hub-beat-row-copy  { order: 2; }
+
+.hub-beat-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--teal-primary);
+  display: block;
+  margin-bottom: 14px;
+}
+.hub-beat-headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 28px;
+  color: var(--bone-white);
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+.hub-beat-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--soft-silver);
+  line-height: 1.7;
+}
+
+@media (max-width: 767px) {
+  .hub-beat-row-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 36px 0;
+  }
+  .hub-beat-row-num,
+  .hub-beat-row-image,
+  .hub-beat-row-copy { order: unset !important; }
+  .hub-beat-row-num  { width: auto; font-size: 32px; }
+  .hub-beat-row-image { flex: none; width: 100%; }
+  .hub-beat-row-image img { width: 100%; height: 200px; flex: none; }
+}
+
+/* ─────────────────────────────────────────
+   6A/6B: Technology — clean navy + headline
+───────────────────────────────────────── */
+.hub-tech {
+  background: var(--navy-deep);
+  position: relative; /* keep for z-index stacking */
+}
+/* Kill the bg/overlay elements if still in DOM */
+.hub-tech-bg,
+.hub-tech-overlay { display: none !important; }
+
+.hub-tech-headline {
+  font-size: clamp(44px, 5.5vw, 72px);
+  font-weight: 400;
+}
+
+/* ─────────────────────────────────────────
+   7A/7B/7C: Quote Moment 3
+───────────────────────────────────────── */
+.hub-quote-moment-3 {
+  padding-top: 120px;
+}
+.hub-qm-3-symbol {
+  width: 120px;
+  height: auto;
+}
+.hub-qm-3-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(36px, 5vw, 64px);
+  color: var(--teal-primary);
+  text-align: center;
+  line-height: 1.2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ─────────────────────────────────────────
+   8A/8B: Brand section — full redesign
+───────────────────────────────────────── */
+.hub-brand-heading-wrap {
+  margin-bottom: 48px;
+}
+.hub-brand-main-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(44px, 5vw, 64px);
+  color: var(--bone-white);
+  line-height: 1.05;
+  white-space: normal;
+}
+.hub-brand-main-heading .teal-italic {
+  color: var(--teal-primary);
+  font-style: italic;
+}
+.hub-brand-cols {
+  display: grid;
+  grid-template-columns: 55% 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.hub-brand-left {
+  max-width: 100%;
+}
+.hub-brand-editorial-lines {
+  margin-bottom: 40px;
+}
+.hub-brand-editorial-line {
+  border-left: 3px solid var(--teal-primary);
+  padding: 10px 0 10px 24px;
+  margin-bottom: 32px;
+}
+.hub-brand-editorial-line:last-child {
+  margin-bottom: 0;
+}
+.hub-brand-editorial-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--bone-white);
+  line-height: 1.8;
+  margin: 0;
+}
+.hub-brand-closing {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--soft-silver);
+  margin-top: 40px;
+  line-height: 1.45;
+}
+.hub-brand-tech-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(0, 212, 204, 0.15), 0 20px 60px rgba(0, 0, 0, 0.4);
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .hub-brand-cols {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .hub-brand-main-heading {
+    white-space: normal;
+    font-size: clamp(40px, 10vw, 56px);
+  }
+}
+
+/* ─────────────────────────────────────────
+   9A/9B/9C: Who This Is For — full redesign
+───────────────────────────────────────── */
+/* 9A: Headline split */
+.hub-audience-headline {
+  line-height: 1.2;
+  margin-bottom: 48px;
+  font-size: inherit; /* controlled by parts */
+}
+.hub-audience-h-part1 {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(32px, 4vw, 56px);
+  color: var(--bone-white);
+  line-height: 1.2;
+}
+.hub-audience-h-part2 {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(32px, 4vw, 56px);
+  color: var(--teal-primary);
+  line-height: 1.2;
+  margin-top: 4px;
+}
+
+/* 9B: Elegant horizontal rule rows */
+.hub-audience-rows {
+  margin-bottom: 0;
+}
+.hub-audience-row {
+  border-top: 1px solid rgba(0, 212, 204, 0.15);
+  padding: 32px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+.hub-audience-row:last-child {
+  border-bottom: 1px solid rgba(0, 212, 204, 0.15);
+}
+.hub-audience-row-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--teal-primary);
+  flex-shrink: 0;
+  letter-spacing: 0.10em;
+  padding-top: 6px;
+  min-width: 28px;
+}
+.hub-audience-row-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 1.8vw, 22px);
+  color: var(--bone-white);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* 9C: Stacked closing statement */
+.hub-audience-statement {
+  margin-top: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hub-audience-stmt-1,
+.hub-audience-stmt-3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 2.8vw, 36px);
+  color: var(--bone-white);
+  line-height: 1.2;
+}
+.hub-audience-stmt-2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(32px, 3.8vw, 48px);
+  color: var(--teal-primary);
+  line-height: 1.2;
+}
+
+/* ─────────────────────────────────────────
+   10A/10B/10C: Social Proof
+───────────────────────────────────────── */
+.hub-social-headline {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+}
+.hub-testimonial-card {
+  padding: 36px;
+}
+.hub-testimonials-grid {
+  column-gap: 24px;
+}
+
+/* 10C: Closing line stack */
+.hub-social-closing-block {
+  margin-top: 60px;
+  text-align: center;
+}
+.hub-social-close-1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(22px, 2.5vw, 32px);
+  color: var(--bone-white);
+  line-height: 1.25;
+}
+.hub-social-close-2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(22px, 2.5vw, 32px);
+  color: var(--teal-primary);
+  line-height: 1.25;
+  margin-top: 4px;
+}
+
+/* ─────────────────────────────────────────
+   11A/11B/11C/11D: Your Starting Point
+───────────────────────────────────────── */
+.hub-start-headline {
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 500;
+}
+.hub-teal-highlight {
+  color: var(--teal-primary);
+}
+.hub-start-italic-teal {
+  color: var(--teal-primary) !important;
+}
+.hub-start-cta-spaced {
+  margin-top: 40px;
+}
+
+/* ─────────────────────────────────────────
+   12A: Offer cards — already done in HTML
+   12B: Shimmer animation on both buttons
+───────────────────────────────────────── */
+@keyframes card-btn-shimmer {
+  0%   { left: -80%;  }
+  60%  { left: 160%;  }
+  100% { left: 160%;  }
+}
+.hub-offer-btn {
+  position: relative;
+  overflow: hidden;
+}
+.hub-offer-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.20) 50%,
+    transparent 100%
+  );
+  transform: skewX(-15deg);
+  animation: card-btn-shimmer 2.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* 12C: Offer closing spacing + size */
+.hub-offer-closing-v2 {
+  margin-top: 80px !important;
+  font-size: 40px !important;
+}
+
+/* ─────────────────────────────────────────
+   13A: The Close — two stacked lines
+───────────────────────────────────────── */
+.hub-close-line-1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(28px, 3.5vw, 48px);
+  color: var(--bone-white);
+  line-height: 1.15;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.hub-close-line-2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(44px, 5vw, 64px);
+  color: var(--teal-primary);
+  line-height: 1.08;
+  text-align: center;
+}
