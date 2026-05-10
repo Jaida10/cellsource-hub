@@ -3882,3 +3882,302 @@ button[type="submit"] span, button[type="submit"] {
   line-height: 1.08;
   text-align: center;
 }
+
+/* ═══════════════════════════════════════
+   REFINEMENTS v3 — Round 2
+═══════════════════════════════════════ */
+
+/* C1: Hero image right, content left */
+.hub-hero-bg {
+  background-position: right center;
+  background-size: 65% auto;
+}
+.hub-hero-content {
+  max-width: 680px;
+  margin-left: 8%;
+  padding-right: 40px;
+}
+.hub-hero-headline {
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* C3: Reality Check headline */
+.hub-reality-headline-above {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.1;
+}
+
+/* C4: Reality Check content */
+.hub-reality .hub-section-inner {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.hub-reality-cols {
+  gap: 48px;
+}
+.hub-reality-image {
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.hub-reality-boxes {
+  max-width: 440px;
+  padding: 0;
+}
+.hub-reality-box {
+  padding: 16px 20px;
+  margin-bottom: 12px;
+}
+
+/* C5: Quote Moment 1 */
+.hub-qm-line-1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 52px;
+  color: #8A8A8A;
+}
+.hub-qm-line-2 {
+  font-size: 72px;
+  font-weight: 700;
+  color: #E8E8E0;
+  text-transform: uppercase;
+}
+.hub-qm-line-3 {
+  font-size: 52px;
+  font-weight: 700;
+  font-style: italic;
+  color: #00D4CC;
+}
+
+/* C7: Science section heading and subheading */
+.hub-beats-title {
+  font-size: 56px;
+  font-weight: 600;
+}
+.hub-beats-sub {
+  font-size: 22px;
+  font-weight: 500;
+  color: #8A8A8A;
+}
+
+/* C8: Technology heading one line */
+.hub-tech-headline {
+  font-size: 58px;
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+}
+
+/* C9: Technology body text width */
+.hub-tech-body {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* C12: Combined quote section */
+.hub-quote-combined {
+  padding: 120px 80px;
+  text-align: center;
+  background: #0B1426;
+}
+.hub-quote-combined__line1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: #E8E8E0;
+  margin-bottom: 24px;
+  font-style: normal;
+}
+.hub-quote-combined__line2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 64px;
+  font-weight: 400;
+  color: #00D4CC;
+  font-style: italic;
+}
+
+/* C13: Brand section single column centred */
+.hub-brand-cols {
+  grid-template-columns: 1fr;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* C14: Brand heading weight */
+.hub-brand-main-heading {
+  font-weight: 600;
+}
+.hub-brand-main-heading .teal-italic {
+  font-weight: 600;
+}
+
+/* C15: Brand closing line teal */
+.hub-brand-closing {
+  font-weight: 600;
+  color: #00D4CC;
+  font-style: italic;
+  font-size: 22px;
+}
+
+/* C16: This Is For You headline */
+.tify-line1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: #E8E8E0;
+  display: block;
+}
+.tify-line2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: #E8E8E0;
+  display: block;
+  margin-top: 8px;
+}
+
+/* C17: This Is For You single card */
+.tify-card {
+  background: #0F1B33;
+  border: 1px solid rgba(0, 212, 204, 0.2);
+  border-radius: 16px;
+  padding: 40px 48px;
+  max-width: 720px;
+  margin: 48px auto 0;
+}
+.tify-card__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 212, 204, 0.1);
+}
+.tify-card__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.tify-card__arrow {
+  color: #00D4CC;
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.tify-card__text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: #E8E8E0;
+  line-height: 1.6;
+}
+
+/* C18: This Is For You closing */
+.tify-closing {
+  margin-top: 80px;
+  text-align: center;
+  padding: 0 80px;
+}
+.tify-closing__line1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: #E8E8E0;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.tify-closing__line2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: #E8E8E0;
+  line-height: 1.2;
+}
+.tify-closing__highlight {
+  color: #00D4CC;
+}
+
+/* C19: Real Experiences heading */
+.hub-social-headline {
+  font-size: 52px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* C20: Real Experiences closing */
+.re-closing {
+  margin-top: 80px;
+  text-align: center;
+}
+.re-closing__line1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #E8E8E0;
+  display: block;
+  margin-bottom: 8px;
+}
+.re-closing__line2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #00D4CC;
+  font-style: italic;
+  display: block;
+}
+
+/* C21: Starting Point heading */
+.sp-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.sp-heading__line1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 600;
+  color: #E8E8E0;
+  display: block;
+  line-height: 1.1;
+}
+.sp-heading__line2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 600;
+  color: #00D4CC;
+  display: block;
+  line-height: 1.1;
+  margin-top: 8px;
+}
+
+/* C22: Starting Point body text */
+.hub-start-body {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+}
+
+/* C23: Offer heading destination teal */
+.hub-offer-destination {
+  color: #00D4CC;
+  font-style: italic;
+}
+
+/* C26: Close section weights */
+.hub-close-line-1 {
+  font-weight: 600;
+  font-size: 48px;
+}
+.hub-close-line-2 {
+  font-weight: 600;
+  font-size: 64px;
+}
