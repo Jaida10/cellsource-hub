@@ -4357,3 +4357,21 @@ button[type="submit"] span, button[type="submit"] {
   line-height: 1.0;
   letter-spacing: -0.025em;
 }
+
+/* ═══════════════════════════════════════
+   TICKER SEAMLESS LOOP FIX
+═══════════════════════════════════════ */
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.hub-ticker {
+  overflow: hidden;
+  width: 100%;
+}
+.hub-ticker-track {
+  animation: ticker-scroll 25s linear infinite;
+  white-space: nowrap;
+  display: flex;
+  width: max-content;
+}
