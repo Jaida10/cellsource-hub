@@ -4359,6 +4359,37 @@ button[type="submit"] span, button[type="submit"] {
 }
 
 /* ═══════════════════════════════════════
+   QUOTE MOMENT 1 FONT FIX
+═══════════════════════════════════════ */
+.hub-qm-line-1,
+.hub-qm-line-2,
+.hub-qm-line-3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 72px;
+  line-height: 1.1;
+  display: block;
+  text-align: center;
+}
+.hub-qm-line-1 {
+  font-weight: 600;
+  font-style: italic;
+  color: #8A8A8A;
+  text-transform: none;
+}
+.hub-qm-line-2 {
+  font-weight: 800;
+  font-style: normal;
+  color: #E8E8E0;
+  text-transform: uppercase;
+}
+.hub-qm-line-3 {
+  font-weight: 700;
+  font-style: italic;
+  color: #00D4CC;
+  text-transform: none;
+}
+
+/* ═══════════════════════════════════════
    TICKER SEAMLESS LOOP FIX
 ═══════════════════════════════════════ */
 @keyframes ticker-scroll {
