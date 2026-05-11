@@ -4181,3 +4181,158 @@ button[type="submit"] span, button[type="submit"] {
   font-weight: 600;
   font-size: 64px;
 }
+
+/* ═══════════════════════════════════════
+   REFINEMENTS v4 — Round 3
+═══════════════════════════════════════ */
+
+/* R1: Hero — fix image proportions */
+.hub-hero-bg {
+  background-size: auto 100%;
+  background-position: 75% center;
+  background-repeat: no-repeat;
+}
+
+/* R2: Reality Check — layout restructure */
+.hub-reality .hub-section-inner {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.hub-reality-cols {
+  grid-template-columns: 55% 45%;
+  gap: 48px;
+  align-items: start;
+}
+.hub-reality-image {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  max-width: none;
+}
+.hub-reality-image-wrap {
+  display: block;
+}
+.hub-reality-body {
+  width: 100%;
+  max-width: 800px;
+  margin: 48px auto 0;
+  text-align: center;
+  padding: 0 40px;
+}
+
+/* R3: Quote Moment 1 — all 72px */
+.hub-qm-line-1 {
+  font-size: 72px;
+  font-weight: 700;
+  font-style: italic;
+  color: #8A8A8A;
+}
+.hub-qm-line-2 {
+  font-size: 72px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #E8E8E0;
+}
+.hub-qm-line-3 {
+  font-size: 72px;
+  font-weight: 700;
+  font-style: italic;
+  color: #00D4CC;
+}
+
+/* R4: The Layer — highlighted text */
+.hub-layer-emphasis {
+  font-size: 24px;
+  font-style: italic;
+  color: #00D4CC;
+}
+
+/* R5: Combined quote line 1 */
+.hub-quote-combined__line1 {
+  font-size: 48px;
+  font-weight: 500;
+  color: #E8E8E0;
+}
+
+/* R6: What Is Cellsource — centre content */
+.hub-brand .hub-section-inner {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.hub-brand-main-heading {
+  text-align: center;
+}
+
+/* R7: This Is For You — top margin */
+.hub-audience {
+  margin-top: 120px;
+}
+
+/* R8: This Is For You — headline line 2 teal */
+.tify-line1 {
+  line-height: 1.15;
+}
+.tify-line2 {
+  color: #00D4CC;
+  line-height: 1.15;
+}
+
+/* R10: This Is For You — closing three lines */
+.tify-closing {
+  margin-top: 100px;
+  text-align: center;
+  padding: 0 80px;
+}
+.tify-closing__text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 44px;
+  font-weight: 700;
+  display: block;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+.tify-closing__text--white {
+  color: #E8E8E0;
+}
+.tify-closing__text--teal {
+  color: #00D4CC;
+}
+
+/* R11: Starting Point — spread content */
+.hub-start-inner {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+  text-align: center;
+}
+.hub-start-body p {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 17px;
+  line-height: 1.85;
+}
+.hub-start-cta {
+  margin-top: 48px;
+  min-width: 320px;
+}
+
+/* R12: Close — commanding scale */
+.hub-close-line-1 {
+  font-size: 56px;
+  font-weight: 600;
+  color: #E8E8E0;
+}
+.hub-close-line-2 {
+  font-size: 80px;
+  font-weight: 600;
+  color: #00D4CC;
+  font-style: italic;
+}
