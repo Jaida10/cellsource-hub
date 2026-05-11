@@ -4336,3 +4336,24 @@ button[type="submit"] span, button[type="submit"] {
   color: #00D4CC;
   font-style: italic;
 }
+
+/* ═══════════════════════════════════════
+   HERO LAYOUT FIX
+═══════════════════════════════════════ */
+.hub-hero-bg {
+  background-size: 58% auto;
+  background-position: 72% center;
+  background-repeat: no-repeat;
+}
+.hub-hero-content {
+  max-width: 760px;
+  width: 50%;
+  margin-left: 7%;
+  padding-top: 0;
+}
+.hub-hero-headline {
+  font-size: 86px;
+  font-weight: 500;
+  line-height: 1.0;
+  letter-spacing: -0.025em;
+}
