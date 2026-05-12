@@ -4434,11 +4434,13 @@ button[type="submit"] span, button[type="submit"] {
 
 /* HERO — layout and image fix */
 .hub-hero {
-  background-image: url('Hub Page |Website Images/Cellsoures | hero-background.png') !important;
-  background-size: auto 100% !important;
-  background-position: 72% center !important;
-  background-repeat: no-repeat !important;
   min-height: 100vh !important;
+}
+
+.hub-hero-bg {
+  background-size: auto 100% !important;
+  background-position: 68% center !important;
+  background-repeat: no-repeat !important;
 }
 
 .hub-hero__content {
@@ -4455,10 +4457,13 @@ button[type="submit"] span, button[type="submit"] {
 }
 
 /* TICKER — seamless loop */
+.hub-ticker-track,
 .hub-ticker__track {
   display: flex !important;
   width: max-content !important;
-  animation: cellsource-ticker 25s linear infinite !important;
+  white-space: nowrap !important;
+  animation: cellsource-ticker 28s linear infinite !important;
+  will-change: transform !important;
 }
 
 @keyframes cellsource-ticker {
