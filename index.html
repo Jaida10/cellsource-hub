@@ -647,33 +647,44 @@
 
   /* ── Ticker — JS seamless loop ── */
   (function () {
-    var track = document.getElementById('tickerTrack');
-    var group = document.getElementById('tickerGroup');
-    if (!track || !group) return;
-
-    // Clone the group and append it so the loop is seamless
-    var clone = group.cloneNode(true);
-    clone.removeAttribute('id');
-    clone.setAttribute('aria-hidden', 'true');
-    track.appendChild(clone);
-
-    // Measure the exact pixel width of one group
-    var groupWidth = group.getBoundingClientRect().width;
-
-    // Inject a keyframe that moves exactly one group width
-    var styleEl = document.createElement('style');
-    styleEl.textContent =
-      '@keyframes ticker-js {' +
-      '  0%   { transform: translateX(0); }' +
-      '  100% { transform: translateX(-' + groupWidth + 'px); }' +
-      '}';
-    document.head.appendChild(styleEl);
-
-    // Apply the animation
-    track.style.animation = 'ticker-js 28s linear infinite';
-    track.style.display = 'flex';
-    track.style.width = 'max-content';
-    track.style.whiteSpace = 'nowrap';
+    function initTicker() {
+      var track = document.getElementById('tickerTrack');
+      var group = document.getElementById('tickerGroup');
+      if (!track || !group) return;
+      track.innerHTML = '';
+      track.appendChild(group);
+      var groupWidth = group.getBoundingClientRect().width;
+      if (groupWidth === 0) {
+        requestAnimationFrame(initTicker);
+        return;
+      }
+      var clone = group.cloneNode(true);
+      clone.removeAttribute('id');
+      clone.setAttribute('aria-hidden', 'true');
+      track.appendChild(clone);
+      var styleEl = document.getElementById('ticker-keyframe-style');
+      if (!styleEl) {
+        styleEl = document.createElement('style');
+        styleEl.id = 'ticker-keyframe-style';
+        document.head.appendChild(styleEl);
+      }
+      styleEl.textContent =
+        '@keyframes ticker-js {' +
+        '0% { transform: translateX(0); }' +
+        '100% { transform: translateX(-' + groupWidth + 'px); }' +
+        '}';
+      track.style.animation = 'none';
+      track.style.display = 'flex';
+      track.style.width = 'max-content';
+      track.style.whiteSpace = 'nowrap';
+      void track.offsetWidth;
+      track.style.animation = 'ticker-js 32s linear infinite';
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initTicker);
+    } else {
+      initTicker();
+    }
   })();
 
   /* ── Intersection Observer — scroll reveal ── */

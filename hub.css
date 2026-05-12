@@ -423,7 +423,7 @@ body {
    TICKER STRIP
 ───────────────────────────────────────── */
 .hub-ticker {
-  height: 48px;
+  height: 64px;
   background: var(--navy-mid);
   overflow: hidden;
   display: flex;
@@ -451,16 +451,16 @@ body {
 }
 .hub-ticker-phrase {
   font-family: 'Space Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.15em;
+  font-size: 14px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--teal-primary);
-  padding: 0 28px;
+  padding: 0 48px;
   flex-shrink: 0;
 }
 .hub-ticker-sep {
-  width: 4px;
-  height: 4px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--teal-primary);
   flex-shrink: 0;
@@ -600,10 +600,10 @@ body {
 }
 .hub-qm-line-1,
 .hub-quote__line1 {
-  font-weight: 600;
-  font-style: italic;
-  color: #8A8A8A;
-  text-transform: none;
+  font-weight: 800;
+  font-style: normal;
+  color: #E8E8E0;
+  text-transform: uppercase;
 }
 .hub-qm-line-2,
 .hub-quote__line2 {
@@ -864,10 +864,10 @@ body {
 .hub-brand .hub-section-inner,
 .hub-brand__content {
   max-width: 720px;
-  margin-left: 10%;
+  margin-left: auto;
   margin-right: auto;
-  padding-left: 0;
-  padding-right: 60px;
+  padding-left: 24px;
+  padding-right: 24px;
   text-align: left;
 }
 .hub-brand-heading-wrap {
@@ -894,7 +894,7 @@ body {
   grid-template-columns: 1fr;
   gap: 64px;
   align-items: start;
-  max-width: 700px;
+  max-width: 680px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1479,8 +1479,8 @@ body {
 .hub-social,
 .hub-start,
 .hub-offer {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 160px;
+  padding-bottom: 160px;
 }
 
 /* ─────────────────────────────────────────
