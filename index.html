@@ -91,20 +91,8 @@
      TICKER STRIP
 ═══════════════════════════════════════ -->
 <div class="hub-ticker" aria-hidden="true">
-  <div class="hub-ticker-track hub-ticker__track">
-    <!-- Group 1 -->
-    <div class="hub-ticker-group">
-      <span class="hub-ticker-phrase">Cellsource</span>
-      <span class="hub-ticker-sep"></span>
-      <span class="hub-ticker-phrase">Frequency Technology</span>
-      <span class="hub-ticker-sep"></span>
-      <span class="hub-ticker-phrase">Cellular Health</span>
-      <span class="hub-ticker-sep"></span>
-      <span class="hub-ticker-phrase">Health Beyond the Surface</span>
-      <span class="hub-ticker-sep"></span>
-    </div>
-    <!-- Group 2 — exact duplicate for seamless loop -->
-    <div class="hub-ticker-group" aria-hidden="true">
+  <div id="tickerTrack" class="hub-ticker-track hub-ticker__track">
+    <div id="tickerGroup" class="hub-ticker-group">
       <span class="hub-ticker-phrase">Cellsource</span>
       <span class="hub-ticker-sep"></span>
       <span class="hub-ticker-phrase">Frequency Technology</span>
@@ -656,6 +644,37 @@
       }
     });
   }
+
+  /* ── Ticker — JS seamless loop ── */
+  (function () {
+    var track = document.getElementById('tickerTrack');
+    var group = document.getElementById('tickerGroup');
+    if (!track || !group) return;
+
+    // Clone the group and append it so the loop is seamless
+    var clone = group.cloneNode(true);
+    clone.removeAttribute('id');
+    clone.setAttribute('aria-hidden', 'true');
+    track.appendChild(clone);
+
+    // Measure the exact pixel width of one group
+    var groupWidth = group.getBoundingClientRect().width;
+
+    // Inject a keyframe that moves exactly one group width
+    var styleEl = document.createElement('style');
+    styleEl.textContent =
+      '@keyframes ticker-js {' +
+      '  0%   { transform: translateX(0); }' +
+      '  100% { transform: translateX(-' + groupWidth + 'px); }' +
+      '}';
+    document.head.appendChild(styleEl);
+
+    // Apply the animation
+    track.style.animation = 'ticker-js 28s linear infinite';
+    track.style.display = 'flex';
+    track.style.width = 'max-content';
+    track.style.whiteSpace = 'nowrap';
+  })();
 
   /* ── Intersection Observer — scroll reveal ── */
   var revealEls = document.querySelectorAll('.reveal');

@@ -4438,9 +4438,10 @@ button[type="submit"] span, button[type="submit"] {
 }
 
 .hub-hero-bg {
-  background-size: auto 100% !important;
-  background-position: 68% center !important;
+  background-size: auto 110% !important;
+  background-position: 62% center !important;
   background-repeat: no-repeat !important;
+  right: -40px !important;
 }
 
 .hub-hero__content {
@@ -4462,7 +4463,6 @@ button[type="submit"] span, button[type="submit"] {
   display: flex !important;
   width: max-content !important;
   white-space: nowrap !important;
-  animation: cellsource-ticker 28s linear infinite !important;
   will-change: transform !important;
 }
 
