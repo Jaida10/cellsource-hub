@@ -560,7 +560,7 @@ body {
 .hub-reality-body {
   font-family: 'Inter', sans-serif;
   font-size: 15px;
-  color: var(--soft-silver);
+  color: var(--bone-white);
   line-height: 1.8;
   width: 100%;
   max-width: 100%;
@@ -647,7 +647,7 @@ body {
 .hub-layer-body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
-  color: var(--soft-silver);
+  color: var(--bone-white);
   line-height: 1.9;
 }
 .hub-layer-body p + p {
@@ -868,11 +868,11 @@ body {
 /* Merged: v4 left-align + Override Patch BEM alias */
 .hub-brand .hub-section-inner,
 .hub-brand__content {
-  max-width: 720px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 80px;
+  padding-right: 80px;
   text-align: left;
 }
 .hub-brand-heading-wrap {
@@ -882,7 +882,7 @@ body {
 .hub-brand-main-heading {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
-  font-size: clamp(44px, 5vw, 64px);
+  font-size: clamp(52px, 6vw, 80px);
   color: var(--bone-white);
   line-height: 1.05;
   white-space: normal;
@@ -897,9 +897,9 @@ body {
 .hub-brand-cols {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 64px;
+  gap: 48px;
   align-items: start;
-  max-width: 680px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -911,27 +911,27 @@ body {
 }
 .hub-brand-editorial-line {
   border-left: 3px solid var(--teal-primary);
-  padding: 10px 0 10px 24px;
-  margin-bottom: 32px;
+  padding: 14px 0 14px 28px;
+  margin-bottom: 40px;
 }
 .hub-brand-editorial-line:last-child {
   margin-bottom: 0;
 }
 .hub-brand-editorial-text {
   font-family: 'Inter', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--bone-white);
-  line-height: 1.8;
+  line-height: 1.9;
   margin: 0;
 }
 /* Merged: Phase 1 italic + v3 weight/color/size */
 .hub-brand-closing {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 600;
   color: #00D4CC;
-  margin-top: 40px;
+  margin-top: 56px;
   line-height: 1.45;
 }
 
@@ -1150,7 +1150,7 @@ body {
 .hub-start-body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
-  color: var(--soft-silver);
+  color: var(--bone-white);
   line-height: 1.8;
   margin-bottom: 12px;
   max-width: 700px;
@@ -1173,6 +1173,10 @@ body {
 }
 .hub-teal-highlight {
   color: var(--teal-primary);
+}
+.hub-kw {
+  color: #00D4CC;
+  font-weight: 500;
 }
 .hub-start-italic {
   font-family: 'Cormorant Garamond', serif;
@@ -1304,7 +1308,7 @@ body {
 .hub-offer-card-body {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
-  color: var(--soft-silver);
+  color: var(--bone-white);
   line-height: 1.7;
   margin-bottom: 32px;
   flex: 1;
