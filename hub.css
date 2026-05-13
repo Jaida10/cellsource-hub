@@ -1374,7 +1374,7 @@ body {
    SECTION 10 — THE CLOSE
 ───────────────────────────────────────── */
 .hub-close {
-  background: #060C1A;
+  background: #0B1426;
   padding: 140px clamp(40px, 8vw, 120px);
   text-align: center;
   border-top: 1px solid rgba(0, 212, 204, 0.08);
@@ -1404,17 +1404,21 @@ body {
 }
 .hub-close-line-2 {
   font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
   font-size: clamp(44px, 5.5vw, 72px);
   font-weight: 400;
-  color: #E8E8E0;
+  color: #00D4CC;
+  text-align: center;
   line-height: 1.1;
 }
 .hub-close-line-1 {
   font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: clamp(20px, 2.2vw, 28px);
-  color: #00D4CC;
-  letter-spacing: 0.02em;
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 400;
+  color: #E8E8E0;
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 8px;
 }
 
 /* ─────────────────────────────────────────
@@ -1615,8 +1619,8 @@ body {
    NEWSLETTER
 ───────────────────────────────────────── */
 .hub-newsletter {
-  background: #040810;
-  padding: 72px clamp(24px, 5vw, 80px);
+  background: #0B1426;
+  padding: 72px clamp(80px, 12vw, 200px) 56px;
 }
 .hub-newsletter-inner {
   max-width: 1000px;
@@ -1656,25 +1660,27 @@ body {
 }
 .hub-newsletter-form {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
   flex-shrink: 0;
-  width: 360px;
+  width: 420px;
 }
 .hub-newsletter-input {
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  color: var(--bone-white);
+  font-size: 15px;
+  color: #E8E8E0;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(0, 212, 204, 0.25);
-  border-radius: 8px;
-  padding: 14px 20px;
-  width: 100%;
+  border: 1px solid rgba(0, 212, 204, 0.28);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  padding: 0 22px;
   outline: none;
-  transition: border-color 0.3s ease;
+  flex: 1;
+  height: 56px;
 }
 .hub-newsletter-input::placeholder {
-  color: rgba(168, 180, 192, 0.5);
+  color: rgba(232, 232, 224, 0.28);
 }
 .hub-newsletter-input:focus {
   border-color: rgba(0, 212, 204, 0.6);
@@ -1682,16 +1688,18 @@ body {
 .hub-newsletter-btn {
   font-family: 'Space Mono', monospace;
   font-size: 11px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #0B1426;
   background: #00D4CC;
   border: none;
-  border-radius: 8px;
-  padding: 14px 24px;
+  border-radius: 0 8px 8px 0;
+  padding: 0 28px;
   cursor: pointer;
+  height: 56px;
+  white-space: nowrap;
   transition: background 0.3s ease;
-  width: 100%;
+  flex-shrink: 0;
 }
 .hub-newsletter-btn:hover {
   background: #00b8b2;
@@ -1701,7 +1709,7 @@ body {
    FOOTER
 ───────────────────────────────────────── */
 .hub-footer {
-  background: #040810;
+  background: #0B1426;
 }
 .hub-footer-wrap {
   max-width: 1400px;
@@ -1718,7 +1726,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding-bottom: 40px;
+  padding: 64px clamp(80px, 12vw, 200px) 56px;
 }
 .hub-footer-brand {
   display: flex;
@@ -1732,22 +1740,22 @@ body {
   text-decoration: none;
 }
 .hub-footer-brandmark {
-  height: 40px;
-  width: 40px;
+  height: 52px;
+  width: 52px;
   object-fit: contain;
 }
 .hub-footer-wordmark {
   font-family: 'Space Mono', monospace;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 0.22em;
-  color: var(--teal-primary);
+  color: #00D4CC;
   text-transform: uppercase;
 }
 .hub-footer-tagline {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 22px;
-  color: var(--soft-silver);
+  color: #E8E8E0;
   padding-left: 2px;
 }
 .hub-footer-socials {
@@ -1791,7 +1799,7 @@ body {
 .hub-footer-nav-links a {
   font-family: 'Inter', sans-serif;
   font-size: 17px;
-  color: var(--soft-silver);
+  color: #E8E8E0;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -1804,6 +1812,7 @@ body {
   align-items: center;
   text-align: center;
   gap: 12px;
+  padding: 0 clamp(80px, 12vw, 200px) 40px;
 }
 .hub-footer-divider {
   width: 100%;
@@ -1820,7 +1829,7 @@ body {
 .hub-footer-disclosure {
   font-family: 'Inter', sans-serif;
   font-size: 13px;
-  color: rgba(168, 180, 192, 0.55);
+  color: #E8E8E0;
   line-height: 1.6;
   text-align: center;
   max-width: 560px;
