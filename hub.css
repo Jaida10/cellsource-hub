@@ -1089,9 +1089,9 @@ body {
 .hub-testimonial-text {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 20px;
+  font-size: 24px;
   color: var(--bone-white);
-  line-height: 1.8;
+  line-height: 1.85;
   margin-bottom: 28px;
 }
 .hub-testimonial-attr {
