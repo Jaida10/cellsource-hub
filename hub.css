@@ -1064,41 +1064,41 @@ body {
   white-space: nowrap;
 }
 .hub-testimonials-grid {
-  columns: 3;
-  column-gap: 24px;
-  margin-bottom: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 64px;
 }
 /* Merged: Phase 1 + v2 padding */
 .hub-testimonial-card {
-  break-inside: avoid;
   background: var(--navy-light);
   border: 1px solid rgba(0, 212, 204, 0.2);
   border-radius: 12px;
-  padding: 36px;
-  margin-bottom: 24px;
-  display: inline-block;
-  width: 100%;
+  padding: 48px 44px;
+  display: flex;
+  flex-direction: column;
 }
 .hub-testimonial-quote-mark {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 64px;
+  font-size: 80px;
   color: rgba(0, 212, 204, 0.3);
   line-height: 0.75;
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 .hub-testimonial-text {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 17px;
+  font-size: 20px;
   color: var(--bone-white);
-  line-height: 1.7;
-  margin-bottom: 20px;
+  line-height: 1.8;
+  margin-bottom: 28px;
 }
 .hub-testimonial-attr {
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  color: var(--soft-silver);
+  font-size: 15px;
+  color: #00D4CC;
+  margin-top: auto;
 }
 .re-closing {
   margin-top: 80px;
@@ -1573,25 +1573,8 @@ body {
     font-size: clamp(40px, 10vw, 56px);
   }
   .hub-testimonials-grid {
-    columns: 1;
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 16px;
-    margin-left: -24px;
-    margin-right: -24px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 16px;
-  }
-  .hub-testimonial-card {
-    flex: 0 0 280px;
-    scroll-snap-align: start;
-    margin-bottom: 0;
-    break-inside: auto;
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
   .hub-offer-cards {
     grid-template-columns: 1fr;
