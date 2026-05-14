@@ -1729,7 +1729,7 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: start;
   padding: 48px clamp(60px, 10vw, 160px) 40px;
@@ -1767,14 +1767,7 @@ body {
   white-space: nowrap;
 }
 .hub-footer-statement {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: clamp(16px, 1.8vw, 22px);
-  color: rgba(0, 212, 204, 0.55);
-  line-height: 1.55;
-  text-align: center;
-  max-width: 220px;
-  margin: 0 auto;
+  display: none;
 }
 .hub-footer-socials {
   display: flex;
@@ -1842,13 +1835,12 @@ body {
   color: #00D4CC;
 }
 .hub-footer-bottom {
-  max-width: 1100px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 clamp(60px, 10vw, 160px) 32px;
   gap: 24px;
+  width: 100%;
 }
 .hub-footer-divider {
   width: 100%;
@@ -1862,6 +1854,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 13px;
   color: rgba(232, 232, 224, 0.5);
+  white-space: nowrap;
 }
 .hub-footer-disclosure {
   font-family: 'Inter', sans-serif;
