@@ -664,6 +664,91 @@
     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
+  /* ── Hide nav on scroll down, show on scroll up ── */
+  (function () {
+    var nav = document.querySelector('.hub-nav');
+    if (!nav) return;
+
+    var lastScrollY = window.scrollY;
+    var ticking = false;
+    var navHeight = 72;
+    var isHidden = false;
+
+    function updateNav() {
+      var currentScrollY = window.scrollY;
+      var scrollDelta = currentScrollY - lastScrollY;
+
+      if (currentScrollY < navHeight) {
+        if (isHidden) {
+          nav.style.transform = 'translateY(0)';
+          nav.style.opacity = '1';
+          isHidden = false;
+        }
+      } else if (scrollDelta > 4 && !isHidden) {
+        nav.style.transform = 'translateY(-100%)';
+        nav.style.opacity = '0';
+        isHidden = true;
+      } else if (scrollDelta < -4 && isHidden) {
+        nav.style.transform = 'translateY(0)';
+        nav.style.opacity = '1';
+        isHidden = false;
+      }
+
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        requestAnimationFrame(updateNav);
+        ticking = true;
+      }
+    }, { passive: true });
+  })();
+
+  /* ── Smooth flowing scroll (desktop only) ── */
+  (function () {
+    var isTouch = ('ontouchstart' in window) ||
+      (navigator.maxTouchPoints > 0);
+    if (isTouch) return;
+
+    var currentY = window.scrollY;
+    var targetY = window.scrollY;
+    var ease = 0.08;
+    var running = false;
+
+    function lerp(a, b, t) {
+      return a + (b - a) * t;
+    }
+
+    function tick() {
+      currentY = lerp(currentY, targetY, ease);
+      var diff = Math.abs(targetY - currentY);
+      if (diff < 0.5) {
+        currentY = targetY;
+        running = false;
+        return;
+      }
+      window.scrollTo(0, currentY);
+      requestAnimationFrame(tick);
+    }
+
+    window.addEventListener('wheel', function (e) {
+      e.preventDefault();
+      targetY = Math.max(
+        0,
+        Math.min(
+          document.body.scrollHeight - window.innerHeight,
+          targetY + e.deltaY * 1.2
+        )
+      );
+      if (!running) {
+        running = true;
+        requestAnimationFrame(tick);
+      }
+    }, { passive: false });
+  })();
+
 })();
 </script>
 
