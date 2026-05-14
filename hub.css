@@ -1406,10 +1406,12 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 600;
-  font-size: clamp(52px, 7vw, 96px);
+  font-size: clamp(36px, 4.8vw, 68px);
   color: #00D4CC;
   line-height: 1.08;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .hub-close-line-1 {
   font-family: 'Cormorant Garamond', serif;
@@ -1448,8 +1450,9 @@ body {
   text-decoration: none;
 }
 .hub-footer-brandmark {
-  height: 28px;
+  height: 48px;
   width: auto;
+  object-fit: contain;
 }
 .hub-footer-wordmark {
   font-family: 'Space Mono', monospace;
@@ -1485,7 +1488,7 @@ body {
 .hub-footer-divider {
   width: 100%;
   height: 1px;
-  background: rgba(0, 212, 204, 0.10);
+  background: rgba(0, 212, 204, 0.12);
   margin-bottom: 20px;
   border: none;
   max-width: 1400px;
@@ -1619,7 +1622,7 @@ body {
    NEWSLETTER
 ───────────────────────────────────────── */
 .hub-newsletter {
-  background: #0B1426;
+  background: #070D1C;
   padding: 72px clamp(80px, 12vw, 180px) 56px;
 }
 .hub-newsletter-inner {
@@ -1709,7 +1712,7 @@ body {
    FOOTER
 ───────────────────────────────────────── */
 .hub-footer {
-  background: #0B1426;
+  background: #070D1C;
   padding: 0 clamp(80px, 12vw, 180px) 0;
 }
 .hub-footer-wrap {
@@ -1744,8 +1747,9 @@ body {
   text-decoration: none;
 }
 .hub-footer-brandmark {
-  height: 56px;
-  width: 56px;
+  height: 48px;
+  width: auto;
+  object-fit: contain;
 }
 .hub-footer-wordmark {
   font-family: 'Space Mono', monospace;
@@ -1826,7 +1830,7 @@ body {
 .hub-footer-divider {
   width: 100%;
   height: 1px;
-  background: rgba(0, 212, 204, 0.10);
+  background: rgba(0, 212, 204, 0.12);
   border: none;
   margin-bottom: 20px;
 }
