@@ -1620,7 +1620,7 @@ body {
 ───────────────────────────────────────── */
 .hub-newsletter {
   background: #070D1C;
-  padding: 72px clamp(80px, 12vw, 180px) 56px;
+  padding: 48px clamp(80px, 12vw, 180px) 40px;
 }
 .hub-newsletter-inner {
   max-width: 1200px;
@@ -1730,7 +1730,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   gap: 80px;
-  padding: 64px 0 56px;
+  padding: 40px 0 40px;
 }
 .hub-footer-brand {
   display: flex;
@@ -1822,7 +1822,7 @@ body {
   align-items: center;
   text-align: center;
   gap: 12px;
-  padding: 0 clamp(80px, 12vw, 180px) 40px;
+  padding: 0 clamp(80px, 12vw, 180px) 28px;
 }
 .hub-footer-divider {
   width: 100%;
