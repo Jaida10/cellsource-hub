@@ -714,11 +714,16 @@
 
     var currentY = window.scrollY;
     var targetY = window.scrollY;
-    var ease = 0.08;
+    var ease = 0.07;
     var running = false;
+    var maxStep = 120;
 
     function lerp(a, b, t) {
       return a + (b - a) * t;
+    }
+
+    function clamp(val, min, max) {
+      return Math.min(Math.max(val, min), max);
     }
 
     function tick() {
@@ -735,13 +740,8 @@
 
     window.addEventListener('wheel', function (e) {
       e.preventDefault();
-      targetY = Math.max(
-        0,
-        Math.min(
-          document.body.scrollHeight - window.innerHeight,
-          targetY + e.deltaY * 1.2
-        )
-      );
+      var step = clamp(e.deltaY, -maxStep, maxStep);
+      targetY = clamp(targetY + step, 0, document.body.scrollHeight - window.innerHeight);
       if (!running) {
         running = true;
         requestAnimationFrame(tick);

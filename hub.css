@@ -579,7 +579,7 @@ body {
   object-position: center;
   border-radius: 12px 12px 0 0;
   max-width: none;
-  box-shadow: 0 0 0 1px rgba(0, 212, 204, 0.15);
+  box-shadow: 0 0 32px rgba(0, 212, 204, 0.08);
 }
 /* Option C — body text as card below boxes */
 .hub-reality-body {
@@ -596,6 +596,7 @@ body {
   border-radius: 12px;
   border: 0.5px solid rgba(255, 255, 255, 0.07);
   border-left: 3px solid rgba(0, 212, 204, 0.4);
+  box-shadow: 0 0 24px rgba(0, 212, 204, 0.05);
 }
 .hub-reality-body p + p {
   margin-top: 14px;
@@ -757,6 +758,7 @@ body {
   border-radius: 12px;
   border: 1px solid rgba(0, 212, 204, 0.30);
   display: block;
+  box-shadow: 0 0 28px rgba(0, 212, 204, 0.08);
 }
 .hub-beat-row-copy {
   flex: 1;
@@ -1014,6 +1016,8 @@ body {
   padding: 48px 56px;
   max-width: 800px;
   margin: 56px auto 0;
+  box-shadow: 0 0 32px rgba(0, 212, 204, 0.06);
+  transition: box-shadow 0.4s ease;
 }
 .tify-card__item {
   display: flex;
@@ -1236,6 +1240,7 @@ body {
   text-align: left;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0 32px rgba(0, 212, 204, 0.06);
 }
 .hub-offer-card-icon {
   width: 48px;
@@ -1555,12 +1560,14 @@ body {
   outline: none;
   flex: 1;
   height: 56px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .hub-newsletter-input::placeholder {
   color: rgba(232, 232, 224, 0.28);
 }
 .hub-newsletter-input:focus {
   border-color: rgba(0, 212, 204, 0.6);
+  box-shadow: 0 0 20px rgba(0, 212, 204, 0.08);
 }
 .hub-newsletter-btn {
   font-family: 'Space Mono', monospace;
@@ -1656,6 +1663,7 @@ body {
 .hub-footer-social-link:hover {
   border-color: #00D4CC;
   color: #00D4CC;
+  box-shadow: 0 0 12px rgba(0, 212, 204, 0.2);
 }
 .hub-footer-nav {
   display: flex;
