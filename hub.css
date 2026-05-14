@@ -780,10 +780,6 @@ body {
   padding-left: 80px;
   padding-right: 80px;
 }
-.hub-tech-bg,
-.hub-tech-overlay {
-  display: none;
-}
 .hub-tech-content {
   position: relative;
   z-index: 2;
@@ -1043,94 +1039,12 @@ body {
 .tify-closing__text--teal  { color: #00D4CC; }
 
 /* ─────────────────────────────────────────
-   SECTION 7 — SOCIAL PROOF
-───────────────────────────────────────── */
-.hub-social {
-  background: var(--navy-mid);
-}
-.hub-social-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-/* Merged: Phase 1 + v2 size + v3 weight/nowrap */
-.hub-social-headline {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 700;
-  font-size: 52px;
-  color: var(--bone-white);
-  text-align: center;
-  margin-bottom: 64px;
-  line-height: 1.2;
-  white-space: nowrap;
-}
-.hub-testimonials-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  margin-bottom: 64px;
-}
-/* Merged: Phase 1 + v2 padding */
-.hub-testimonial-card {
-  background: var(--navy-light);
-  border: 1px solid rgba(0, 212, 204, 0.2);
-  border-radius: 12px;
-  padding: 48px 44px;
-  display: flex;
-  flex-direction: column;
-}
-.hub-testimonial-quote-mark {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 80px;
-  color: rgba(0, 212, 204, 0.3);
-  line-height: 0.75;
-  display: block;
-  margin-bottom: 24px;
-}
-.hub-testimonial-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 24px;
-  color: var(--bone-white);
-  line-height: 1.85;
-  margin-bottom: 28px;
-}
-.hub-testimonial-attr {
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  color: #00D4CC;
-  margin-top: auto;
-}
-.re-closing {
-  margin-top: 80px;
-  text-align: center;
-}
-.re-closing__line1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: #E8E8E0;
-  display: block;
-  margin-bottom: 8px;
-}
-.re-closing__line2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: #00D4CC;
-  font-style: italic;
-  display: block;
-}
-
-/* ─────────────────────────────────────────
    SECTION 8 — YOUR STARTING POINT
 ───────────────────────────────────────── */
 .hub-start {
   background: var(--navy-deep);
   position: relative;
   overflow: hidden;
-}
-.hub-start-membrane {
-  display: none;
 }
 /* Merged: Phase 1 z-index + v4 dimensions/padding */
 .hub-start-inner {
@@ -1379,7 +1293,6 @@ body {
   text-align: center;
   border-top: 1px solid rgba(0, 212, 204, 0.08);
 }
-.hub-close-membrane { display: none; }
 .hub-close-content {
   display: flex;
   flex-direction: column;
@@ -1387,20 +1300,6 @@ body {
   gap: 0;
   max-width: 800px;
   margin: 0 auto;
-}
-.hub-close-eyebrow {
-  font-family: 'Space Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(0, 212, 204, 0.55);
-  margin-bottom: 28px;
-}
-.hub-close-divider {
-  width: 56px;
-  height: 1px;
-  background: rgba(0, 212, 204, 0.35);
-  margin: 28px auto;
 }
 .hub-close-line-2 {
   font-family: 'Cormorant Garamond', serif;
@@ -1424,84 +1323,6 @@ body {
 }
 
 /* ─────────────────────────────────────────
-   FOOTER
-───────────────────────────────────────── */
-.hub-footer-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-bottom: 32px;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.hub-footer-brand {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.hub-footer-brand-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-.hub-footer-brandmark {
-  height: 48px;
-  width: auto;
-  object-fit: contain;
-}
-.hub-footer-wordmark {
-  font-family: 'Space Mono', monospace;
-  font-size: 12px;
-  letter-spacing: 0.22em;
-  color: var(--teal-primary);
-  text-transform: uppercase;
-}
-.hub-footer-tagline {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 17px;
-  color: #E8E8E0;
-  line-height: 1.3;
-  padding-left: 2px;
-  white-space: nowrap;
-}
-.hub-footer-links {
-  display: flex;
-  gap: 32px;
-  list-style: none;
-  align-items: flex-start;
-  padding-top: 4px;
-}
-.hub-footer-links a {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  color: var(--soft-silver);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-.hub-footer-links a:hover {
-  color: var(--bone-white);
-}
-.hub-footer-divider {
-  width: 100%;
-  height: 1px;
-  background: rgba(0, 212, 204, 0.12);
-  border: none;
-  margin: 0;
-  display: block;
-}
-.hub-footer-disclosure {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  color: rgba(168, 180, 192, 0.55);
-  text-align: center;
-  line-height: 1.6;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* ─────────────────────────────────────────
    CONSOLIDATED SECTION SPACING
    Corrected class names matched to index.html
 ───────────────────────────────────────── */
@@ -1514,7 +1335,6 @@ body {
 .hub-quote-combined,
 .hub-brand,
 .hub-audience,
-.hub-social,
 .hub-start,
 .hub-offer {
   padding-top: 160px;
@@ -1582,34 +1402,33 @@ body {
     white-space: normal;
     font-size: clamp(40px, 10vw, 56px);
   }
-  .hub-testimonials-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
   .hub-offer-cards {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  .hub-footer-main {
-    flex-direction: column;
-    gap: 28px;
-  }
-  .hub-footer-links {
-    flex-wrap: wrap;
-    gap: 16px 24px;
-  }
   .tify-line1 {
     font-size: 26px;
     white-space: normal;
+  }
+  .hub-newsletter-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hub-newsletter-form {
+    width: 100%;
+  }
+  .hub-footer-inner {
+    flex-direction: column;
+    gap: 36px;
+  }
+  .hub-footer-bottom {
+    align-items: center;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .hub-nav-links {
     gap: 20px;
-  }
-  .hub-testimonials-grid {
-    columns: 2;
   }
 }
 
@@ -1757,9 +1576,6 @@ body {
   padding-left: 2px;
   white-space: nowrap;
 }
-.hub-footer-statement {
-  display: none;
-}
 .hub-footer-socials {
   display: flex;
   gap: 10px;
@@ -1846,29 +1662,4 @@ body {
   font-size: 13px;
   color: rgba(232, 232, 224, 0.5);
   white-space: nowrap;
-}
-.hub-footer-disclosure {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  color: #E8E8E0;
-  line-height: 1.6;
-  text-align: center;
-  max-width: 560px;
-}
-
-@media (max-width: 767px) {
-  .hub-newsletter-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .hub-newsletter-form {
-    width: 100%;
-  }
-  .hub-footer-inner {
-    flex-direction: column;
-    gap: 36px;
-  }
-  .hub-footer-bottom {
-    align-items: center;
-  }
 }
