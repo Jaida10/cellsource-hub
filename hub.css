@@ -50,6 +50,18 @@ body {
   }
 }
 
+@keyframes hero-drift {
+  0%   { transform: translateY(0px) scale(1.04); }
+  50%  { transform: translateY(-18px) scale(1.04); }
+  100% { transform: translateY(0px) scale(1.04); }
+}
+
+@keyframes btn-shimmer {
+  0%   { left: -120%; }
+  60%  { left: 120%; }
+  100% { left: 120%; }
+}
+
 @keyframes scroll-bounce {
   0%, 100% { transform: translateY(0); opacity: 0.5; }
   50%       { transform: translateY(7px); opacity: 1; }
@@ -271,6 +283,8 @@ body {
   background-position: 60% center;
   background-repeat: no-repeat;
   z-index: 0;
+  animation: hero-drift 9s ease-in-out infinite;
+  will-change: transform;
 }
 
 .hub-hero-atmosphere {
@@ -382,6 +396,25 @@ body {
   animation: element-enter 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 600ms forwards;
   gap: 8px;
   margin-top: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.hub-hero-cta-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 20%,
+    rgba(232, 232, 224, 0.18) 50%,
+    transparent 80%
+  );
+  transform: skewX(-20deg);
+  animation: btn-shimmer 4s ease-in-out infinite;
+  pointer-events: none;
 }
 .hub-hero-cta-label {
   font-family: 'Cormorant Garamond', serif;
@@ -1155,6 +1188,25 @@ body {
     0 0 0 1px rgba(0,212,204,0.45),
     0 0 24px rgba(0,212,204,0.18),
     0 6px 28px rgba(0,0,0,0.45);
+  position: relative;
+  overflow: hidden;
+}
+.hub-start-cta::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 20%,
+    rgba(232, 232, 224, 0.18) 50%,
+    transparent 80%
+  );
+  transform: skewX(-20deg);
+  animation: btn-shimmer 4s ease-in-out infinite;
+  pointer-events: none;
 }
 .hub-start-cta:hover {
   background-position: right center;
@@ -1288,6 +1340,23 @@ body {
   color: #0B1426;
   background: linear-gradient(135deg, #4ADDD8 0%, #00D4CC 50%, #00BCBA 100%);
   box-shadow: 0 0 16px rgba(0,212,204,0.15);
+}
+.hub-offer-btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 20%,
+    rgba(232, 232, 224, 0.18) 50%,
+    transparent 80%
+  );
+  transform: skewX(-20deg);
+  animation: btn-shimmer 4s ease-in-out infinite;
+  pointer-events: none;
 }
 .hub-offer-btn-primary:hover {
   box-shadow: 0 0 28px rgba(0,212,204,0.35);
