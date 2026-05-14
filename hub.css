@@ -397,24 +397,6 @@ body {
   gap: 8px;
   margin-top: 8px;
   position: relative;
-  overflow: hidden;
-}
-.hub-hero-cta-link::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -120%;
-  width: 60px;
-  height: 100%;
-  background: linear-gradient(
-    105deg,
-    transparent 20%,
-    rgba(232, 232, 224, 0.18) 50%,
-    transparent 80%
-  );
-  transform: skewX(-20deg);
-  animation: btn-shimmer 4s ease-in-out infinite;
-  pointer-events: none;
 }
 .hub-hero-cta-label {
   font-family: 'Cormorant Garamond', serif;
