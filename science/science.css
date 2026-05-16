@@ -75,7 +75,7 @@
 .sci-hero-headline {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(48px, 7vw, 88px);
-  font-weight: 500;
+  font-weight: 700;
   color: var(--bone-white);
   line-height: 1.08;
   margin-bottom: 28px;
@@ -84,9 +84,10 @@
 
 .sci-hero-sub {
   font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
+  font-style: normal;
+  font-weight: 600;
   font-size: clamp(22px, 2.8vw, 32px);
-  color: var(--teal-primary);
+  color: var(--bone-white);
   margin-bottom: 32px;
   text-align: center;
 }
