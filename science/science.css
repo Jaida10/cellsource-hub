@@ -115,7 +115,7 @@
    SECTION BASE
 ───────────────────────────────────────── */
 .sci-section {
-  padding: var(--sci-section-padding) clamp(24px, 6vw, 80px);
+  padding: var(--sci-section-padding) 0;
   background: var(--navy-deep);
   border-top: 1px solid rgba(0, 212, 204, 0.06);
 }
@@ -123,9 +123,34 @@
 .sci-section-inner {
   max-width: var(--sci-content-max);
   margin: 0 auto;
+  display: block;
+}
+
+.sci-section-top {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 0 clamp(24px, 6vw, 80px);
+}
+
+.sci-visual-full {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 7;
+  border-radius: 0;
+  margin-bottom: 56px;
+  background: var(--navy-mid);
+  border-top: 1px solid rgba(0, 212, 204, 0.15);
+  border-bottom: 1px solid rgba(0, 212, 204, 0.15);
   display: flex;
-  gap: clamp(48px, 6vw, 96px);
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px rgba(0, 212, 204, 0.06);
+}
+
+.sci-section-body-block {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 6vw, 80px);
 }
 
 .sci-section-copy {
@@ -155,7 +180,7 @@
 .sci-section-headline {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(34px, 4vw, 52px);
-  font-weight: 500;
+  font-weight: 700;
   color: var(--bone-white);
   line-height: 1.15;
   margin-bottom: 24px;
