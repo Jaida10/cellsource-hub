@@ -322,6 +322,13 @@
 }
 
 /* ─────────────────────────────────────────
+   UTILITY
+───────────────────────────────────────── */
+.sci-teal {
+  color: #00D4CC;
+}
+
+/* ─────────────────────────────────────────
    CLOSING SECTION — Section 07
 ───────────────────────────────────────── */
 .sci-closing {
@@ -344,7 +351,7 @@
 .sci-closing-headline {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(36px, 4.5vw, 58px);
-  font-weight: 500;
+  font-weight: 700;
   color: var(--bone-white);
   line-height: 1.15;
   margin-bottom: 16px;
@@ -379,10 +386,11 @@
 
 .sci-closing-block-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--bone-white);
   margin-bottom: 14px;
+  line-height: 1.3;
 }
 
 .sci-closing-block-body {
@@ -406,7 +414,7 @@
 .sci-closing-line {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(28px, 3.5vw, 44px);
-  font-weight: 500;
+  font-weight: 700;
   color: var(--teal-primary);
   margin-bottom: 36px;
   text-align: center;
