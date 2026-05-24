@@ -348,11 +348,28 @@
   max-width: 900px;
 }
 
+.ol-assessment-bridge .ol-bridge-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
+  align-items: flex-start;
+}
+
 .ol-assessment-bridge .ol-section-headline {
   font-size: clamp(40px, 5vw, 64px);
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: left;
+  max-width: 760px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.ol-assessment-bridge .ol-bridge-body {
+  text-align: left;
+  max-width: 760px;
+}
+
+.ol-assessment-bridge .ol-bridge-cta {
+  align-self: flex-start;
 }
 
 .ol-bridge-callout {
