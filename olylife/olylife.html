@@ -61,67 +61,74 @@
 ═══════════════════════════════════════ -->
 <section class="ol-hero" aria-label="The Living Opening">
 
-  <div class="ol-hero-silhouette" aria-hidden="true">
-    <svg width="100%" height="100%" viewBox="0 0 200 400" preserveAspectRatio="xMidYMid meet">
+  <p class="ol-hero-ticker" aria-live="polite">
+    <span class="ol-ticker-line ol-tl-1">Right now your mitochondria are producing energy in every cell in your body.</span>
+    <span class="ol-ticker-line ol-tl-2">Right now your cells are sending signals faster than conscious thought.</span>
+    <span class="ol-ticker-line ol-tl-3">Right now your body is running on frequency.</span>
+  </p>
 
-      <!-- Brain glow -->
-      <circle cx="100" cy="28" r="14" fill="rgba(0,212,204,0.08)" stroke="none" class="ol-pulse-med"/>
+  <div class="ol-hero-main">
 
-      <!-- Head -->
-      <circle cx="100" cy="35" r="22" stroke="#00D4CC" stroke-width="1" fill="none" class="ol-pulse-med"/>
+    <div class="ol-hero-visual" aria-hidden="true">
+      <svg width="100%" height="100%" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid meet" style="display:block">
 
-      <!-- Neck -->
-      <line x1="100" y1="57" x2="100" y2="75" stroke="#00D4CC" stroke-width="1" class="ol-pulse-med"/>
+        <!-- Outer atmosphere -->
+        <ellipse cx="200" cy="250" rx="160" ry="200" fill="none" stroke="rgba(0,212,204,0.06)" stroke-width="40" class="ol-pulse-slow"/>
 
-      <!-- Shoulders -->
-      <line x1="60" y1="90" x2="140" y2="90" stroke="#00D4CC" stroke-width="1.2" class="ol-pulse-fast"/>
+        <!-- Mid field -->
+        <ellipse cx="200" cy="250" rx="110" ry="145" fill="none" stroke="rgba(0,212,204,0.08)" stroke-width="20" class="ol-pulse-med"/>
 
-      <!-- Left arm -->
-      <path d="M60 90 Q45 130 50 170" stroke="#00D4CC" stroke-width="1" fill="none" class="ol-pulse-slow"/>
+        <!-- Body core -->
+        <ellipse cx="200" cy="250" rx="65" ry="100" fill="rgba(0,212,204,0.04)" stroke="#00D4CC" stroke-width="1" opacity="0.7" class="ol-pulse-med"/>
 
-      <!-- Right arm -->
-      <path d="M140 90 Q155 130 150 170" stroke="#00D4CC" stroke-width="1" fill="none" class="ol-pulse-slow"/>
+        <!-- Head sphere -->
+        <circle cx="200" cy="100" r="38" fill="rgba(0,212,204,0.05)" stroke="#00D4CC" stroke-width="1" opacity="0.8" class="ol-pulse-fast"/>
 
-      <!-- Torso left -->
-      <path d="M65 90 Q60 160 70 230" stroke="#00D4CC" stroke-width="1.2" fill="none" class="ol-pulse-med"/>
+        <!-- Head inner glow -->
+        <circle cx="200" cy="100" r="20" fill="rgba(0,212,204,0.12)" stroke="none" class="ol-pulse-fast"/>
 
-      <!-- Torso right -->
-      <path d="M135 90 Q140 160 130 230" stroke="#00D4CC" stroke-width="1.2" fill="none" class="ol-pulse-med"/>
+        <!-- Spine -->
+        <line x1="200" y1="138" x2="200" y2="350" stroke="rgba(0,212,204,0.5)" stroke-width="1" stroke-dasharray="5 4" class="ol-pulse-med"/>
 
-      <!-- Spine -->
-      <line x1="100" y1="75" x2="100" y2="230" stroke="rgba(0,212,204,0.3)" stroke-width="0.8" stroke-dasharray="4 3" class="ol-pulse-slow"/>
+        <!-- Heart node outer -->
+        <circle cx="185" cy="210" r="16" fill="none" stroke="rgba(0,212,204,0.12)" stroke-width="0.8" class="ol-pulse-fast"/>
 
-      <!-- Heart glow outer -->
-      <circle cx="90" cy="130" r="12" fill="none" stroke="rgba(0,212,204,0.15)" stroke-width="0.8" class="ol-pulse-fast"/>
+        <!-- Heart node inner -->
+        <circle cx="185" cy="210" r="8" fill="rgba(0,212,204,0.2)" stroke="#00D4CC" stroke-width="1" class="ol-pulse-fast"/>
 
-      <!-- Heart glow inner -->
-      <circle cx="90" cy="130" r="6" fill="rgba(0,212,204,0.2)" stroke="#00D4CC" stroke-width="1" class="ol-pulse-fast"/>
+        <!-- Shoulder arc -->
+        <path d="M 80 185 Q 200 165 320 185" fill="none" stroke="#00D4CC" stroke-width="1" opacity="0.6" class="ol-pulse-fast"/>
 
-      <!-- Hip connector -->
-      <line x1="70" y1="230" x2="130" y2="230" stroke="#00D4CC" stroke-width="1" class="ol-pulse-med"/>
+        <!-- Left arm energy line -->
+        <path d="M 80 185 Q 50 270 60 350" fill="none" stroke="rgba(0,212,204,0.45)" stroke-width="1" class="ol-pulse-slow"/>
 
-      <!-- Left leg -->
-      <path d="M70 230 Q65 290 68 360" stroke="#00D4CC" stroke-width="1" fill="none" class="ol-pulse-slow"/>
+        <!-- Right arm energy line -->
+        <path d="M 320 185 Q 350 270 340 350" fill="none" stroke="rgba(0,212,204,0.45)" stroke-width="1" class="ol-pulse-slow"/>
 
-      <!-- Right leg -->
-      <path d="M130 230 Q135 290 132 360" stroke="#00D4CC" stroke-width="1" fill="none" class="ol-pulse-slow"/>
+        <!-- Hip arc -->
+        <path d="M 140 350 Q 200 340 260 350" fill="none" stroke="#00D4CC" stroke-width="1" opacity="0.5" class="ol-pulse-med"/>
 
-      <!-- Radiating energy lines -->
-      <line x1="100" y1="160" x2="30" y2="140" stroke="rgba(0,212,204,0.2)" stroke-width="0.8" stroke-dasharray="3 4" class="ol-pulse-slow"/>
-      <line x1="100" y1="160" x2="170" y2="140" stroke="rgba(0,212,204,0.2)" stroke-width="0.8" stroke-dasharray="3 4" class="ol-pulse-slow"/>
-      <line x1="100" y1="160" x2="20" y2="190" stroke="rgba(0,212,204,0.15)" stroke-width="0.8" stroke-dasharray="3 4" class="ol-pulse-slow"/>
-      <line x1="100" y1="160" x2="180" y2="190" stroke="rgba(0,212,204,0.15)" stroke-width="0.8" stroke-dasharray="3 4" class="ol-pulse-slow"/>
+        <!-- Left leg energy line -->
+        <path d="M 155 350 Q 145 420 148 490" fill="none" stroke="rgba(0,212,204,0.35)" stroke-width="1" class="ol-pulse-slow"/>
 
-    </svg>
-  </div>
+        <!-- Right leg energy line -->
+        <path d="M 245 350 Q 255 420 252 490" fill="none" stroke="rgba(0,212,204,0.35)" stroke-width="1" class="ol-pulse-slow"/>
 
-  <div class="ol-hero-copy">
-    <div class="ol-rotating-text" aria-live="polite">
-      <p class="ol-rotating-line ol-line-1">Right now your mitochondria are producing energy in every cell in your body.</p>
-      <p class="ol-rotating-line ol-line-2">Right now your cells are sending signals faster than conscious thought.</p>
-      <p class="ol-rotating-line ol-line-3">Right now your body is running on frequency.</p>
+        <!-- Energy particles -->
+        <circle cx="120" cy="230" r="2" fill="#00D4CC" opacity="0.5" class="ol-pulse-fast"/>
+        <circle cx="280" cy="200" r="2" fill="#00D4CC" opacity="0.4" class="ol-pulse-med"/>
+        <circle cx="100" cy="310" r="1.5" fill="#00D4CC" opacity="0.35" class="ol-pulse-slow"/>
+        <circle cx="310" cy="290" r="2" fill="#00D4CC" opacity="0.45" class="ol-pulse-fast"/>
+        <circle cx="160" cy="390" r="1.5" fill="#00D4CC" opacity="0.3" class="ol-pulse-slow"/>
+        <circle cx="250" cy="370" r="2" fill="#00D4CC" opacity="0.4" class="ol-pulse-med"/>
+
+      </svg>
     </div>
-    <h1 class="ol-hero-headline">This is the technology built for exactly that.</h1>
+
+    <div class="ol-hero-copy">
+      <h1 class="ol-hero-headline">This is the technology built for exactly that.</h1>
+    </div>
+
   </div>
 
 </section>
