@@ -231,13 +231,6 @@
   line-height: 1.2;
 }
 
-.ol-product-tagline {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 18px;
-  color: var(--teal-primary);
-  line-height: 1.4;
-}
 
 .ol-product-body {
   font-family: 'Inter', sans-serif;
@@ -270,15 +263,6 @@
   font-size: clamp(40px, 5vw, 64px);
 }
 
-.ol-experiences-intro {
-  font-family: 'Inter', sans-serif;
-  font-size: 17px;
-  color: var(--bone-white);
-  line-height: 1.8;
-  max-width: 600px;
-  margin: 0 auto 56px;
-  text-align: center;
-}
 
 .ol-testimonials-grid {
   display: grid;
@@ -330,13 +314,13 @@
 }
 
 .ol-bridge-inner {
-  max-width: 900px;
+  max-width: 760px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .ol-bridge-body {
@@ -344,15 +328,8 @@
   font-size: 18px;
   color: var(--bone-white);
   line-height: 1.8;
-  text-align: center;
-  max-width: 900px;
-}
-
-.ol-assessment-bridge .ol-bridge-inner {
-  max-width: 760px;
-  margin: 0 auto;
   text-align: left;
-  align-items: flex-start;
+  max-width: 760px;
 }
 
 .ol-assessment-bridge .ol-section-headline {
@@ -363,22 +340,10 @@
   margin-right: 0;
 }
 
-.ol-assessment-bridge .ol-bridge-body {
-  text-align: left;
-  max-width: 760px;
-}
-
 .ol-assessment-bridge .ol-bridge-cta {
   align-self: flex-start;
 }
 
-.ol-bridge-callout {
-  font-family: 'Space Mono', monospace;
-  font-size: 14px;
-  letter-spacing: 0.16em;
-  color: var(--teal-primary);
-  text-transform: uppercase;
-}
 
 .ol-bridge-cta {
   font-family: 'Space Mono', monospace;

@@ -36,7 +36,6 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
   overscroll-behavior: none;
 }
 
@@ -181,6 +180,11 @@ body {
 }
 .hub-nav-links a:hover {
   color: var(--teal-primary);
+}
+.hub-nav-link--active {
+  color: var(--teal-primary);
+  border-bottom: 1px solid rgba(0, 212, 204, 0.5);
+  padding-bottom: 2px;
 }
 .hub-nav-cta {
   font-family: 'Space Mono', monospace;
@@ -328,12 +332,6 @@ body {
   margin-left: 7%;
 }
 
-/* BEM alias — same element, wins over .hub-hero-content for shared props */
-.hub-hero__content {
-  max-width: 680px;
-  width: 48%;
-  margin-left: 8%;
-}
 
 /* Merged: all versions — Hero Fix is last */
 .hub-hero-headline {
@@ -349,12 +347,6 @@ body {
   animation: element-enter 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 200ms forwards;
 }
 
-.hub-hero__headline {
-  font-size: 86px;
-  font-weight: 500;
-  line-height: 1.0;
-  letter-spacing: -0.025em;
-}
 
 /* Merged: font-size/color set to inherit (v2) so spans control */
 .hub-hero-sub {
