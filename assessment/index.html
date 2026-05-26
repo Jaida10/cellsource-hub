@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cellsource — Cellular Health Snapshot</title>
+  <meta name="description" content="13 questions. Your cellular blueprint. Personalised in 4 minutes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- ═══════════════════════════════════════
+         ATMOSPHERIC BACKGROUND (fixed, always visible)
+    ════════════════════════════════════════ -->
+    <div class="bg-atmosphere" aria-hidden="true">
+      <div class="bg-layer bg-layer-foundation"></div>
+      <div class="bg-layer bg-layer-teal"></div>
+      <div class="bg-layer bg-layer-gold"></div>
+      <div class="bg-layer bg-layer-grain"></div>
+      <div class="bg-layer bg-layer-scanlines"></div>
+    </div>
+
+    <!-- Cursor-reactive light layers -->
+    <div class="bg-cursor-teal" aria-hidden="true"></div>
+    <div class="bg-cursor-gold" aria-hidden="true"></div>
+
+    <!-- Floating particles container -->
+    <div id="particles-container" aria-hidden="true"></div>
+
+    <!-- ═══════════════════════════════════════
+         SCREEN 0 — LANDING PAGE
+    ════════════════════════════════════════ -->
+    <div id="screen-landing" class="screen active" role="main">
+      <div class="landing-layout">
+
+        <div class="landing-text-col">
+          <div class="landing-content">
+            <span class="type-label landing-element landing-label">Cellular Health Snapshot</span>
+
+            <h1 class="type-display gradient-text gradient-text-animated landing-element landing-headline">
+              Your cells are trying<br>to tell you something.
+            </h1>
+
+            <p class="type-sub landing-element landing-sub">
+              13 questions. Your cellular blueprint.<br>Personalised in 4 minutes.
+            </p>
+
+            <div class="landing-element landing-cta">
+              <button class="btn-primary" id="btn-begin" aria-label="Begin the cellular health assessment">
+                <span class="gradient-text">Begin Your Assessment</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="landing-right" aria-hidden="true">
+          <div class="cell-membrane-wrap">
+            <svg class="cell-membrane-svg" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
+              <circle class="cm-ring cm-ring-outer" cx="320" cy="320" r="290"
+                fill="none" stroke="rgba(0,212,204,0.18)" stroke-width="1" stroke-dasharray="5 10"/>
+              <circle class="cm-ring cm-ring-mid" cx="320" cy="320" r="200"
+                fill="none" stroke="rgba(0,212,204,0.30)" stroke-width="1.5" stroke-dasharray="10 14"/>
+              <circle class="cm-ring cm-ring-inner" cx="320" cy="320" r="115"
+                fill="none" stroke="rgba(0,212,204,0.50)" stroke-width="2" stroke-dasharray="14 7"/>
+              <circle class="cm-core" cx="320" cy="320" r="3.5" fill="rgba(0,212,204,0.85)"/>
+              <line class="cm-wave" x1="320" y1="320" x2="320" y2="80"
+                stroke="rgba(0,212,204,0.06)" stroke-width="1"/>
+              <line class="cm-wave" x1="320" y1="320" x2="560" y2="320"
+                stroke="rgba(0,212,204,0.06)" stroke-width="1"/>
+              <line class="cm-wave" x1="320" y1="320" x2="320" y2="560"
+                stroke="rgba(0,212,204,0.06)" stroke-width="1"/>
+              <line class="cm-wave" x1="320" y1="320" x2="80" y2="320"
+                stroke="rgba(0,212,204,0.06)" stroke-width="1"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SCREENS 1–13 — QUESTION CONTAINER
+    ════════════════════════════════════════ -->
+    <div id="screen-questions" class="screen" style="display:none;" role="main" aria-label="Assessment questions">
+      <div class="question-outer content-grid">
+
+        <!-- Frequency field graphic (background, left bleed) -->
+        <svg class="freq-field-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"
+             overflow="visible" aria-hidden="true">
+          <path class="ff-arc ff-arc-1" d="M 300,100 A 200,200 0 0,1 300,500"
+            fill="none" stroke="rgba(0,212,204,0.08)" stroke-width="1"/>
+          <path class="ff-arc ff-arc-2" d="M 300,60 A 240,240 0 0,1 300,540"
+            fill="none" stroke="rgba(0,212,204,0.06)" stroke-width="1"/>
+          <path class="ff-arc ff-arc-3" d="M 300,20 A 280,280 0 0,1 300,580"
+            fill="none" stroke="rgba(0,212,204,0.04)" stroke-width="1"/>
+          <path class="ff-arc ff-arc-4" d="M 300,-20 A 320,320 0 0,1 300,620"
+            fill="none" stroke="rgba(0,212,204,0.025)" stroke-width="1"/>
+        </svg>
+
+        <div class="question-container">
+          <!-- Progress -->
+          <div class="progress-area">
+            <span class="type-data" id="q-progress-label" aria-live="polite">QUESTION 01 OF 13</span>
+            <div class="progress-bar-track" role="progressbar" aria-valuemin="0" aria-valuemax="13" aria-valuenow="1">
+              <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
+          </div>
+
+          <!-- Question content (dynamically rendered) -->
+          <div id="question-content" class="question-content-wrap">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SCREEN 14 — EMAIL CAPTURE
+    ════════════════════════════════════════ -->
+    <div id="screen-email" class="screen" style="display:none;" role="main" aria-label="Enter your email to unlock results">
+      <div class="email-outer content-grid">
+        <div class="email-container">
+
+          <span class="type-label email-anim" style="--email-delay:0ms">Almost There</span>
+
+          <h2 class="email-headline gradient-text email-anim" style="--email-delay:150ms">
+            Your Results Are Ready
+          </h2>
+
+          <p class="email-body-text email-anim" style="--email-delay:300ms;">
+            Enter your email to unlock your complete Cellular Health Snapshot — your pattern,
+            the science behind it, and your personalised product recommendations. Completely free.
+          </p>
+
+          <div class="email-form-wrap email-anim" style="--email-delay:450ms">
+            <input
+              type="email"
+              id="email-input"
+              class="email-input"
+              placeholder="your@email.com"
+              autocomplete="email"
+              aria-label="Email address"
+            >
+            <div class="email-error" id="email-error" role="alert" aria-live="assertive"></div>
+            <button class="btn-primary" id="btn-unlock" aria-label="Unlock my results">
+              <span class="gradient-text">Unlock My Results</span>
+            </button>
+          </div>
+
+          <p class="type-data email-anim" style="--email-delay:600ms; color:var(--soft-silver); margin-top:var(--space-sm);">
+            No spam. Just your results.
+          </p>
+
+          <div class="email-stats email-anim" style="--email-delay:750ms" aria-label="Assessment overview">
+            <span class="type-data">13 Questions</span>
+            <span class="email-stat-dot" aria-hidden="true">·</span>
+            <span class="type-data">5–7 Minutes</span>
+            <span class="email-stat-dot" aria-hidden="true">·</span>
+            <span class="type-data">Free</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         Q13 REVEAL OVERLAY (full-screen moment)
+    ════════════════════════════════════════ -->
+    <div id="q13-reveal" class="q13-reveal" style="display:none;" aria-live="polite" role="region" aria-label="Your words reflected back">
+      <div class="q13-quote" id="q13-quote-text"></div>
+      <div class="q13-response" id="q13-response-text"></div>
+      <div class="q13-scroll-prompt">Your report is ready — scroll to reveal</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SCREEN 15 — RESULTS PAGE
+    ════════════════════════════════════════ -->
+    <div id="screen-results" class="screen" style="display:none;" role="main" aria-label="Your Cellular Health Report">
+
+      <!-- Cell membrane graphic (results version — ambient, top right) -->
+      <div class="results-membrane-wrap" aria-hidden="true">
+        <svg class="cell-membrane-svg" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
+          <circle class="cm-ring cm-ring-outer" cx="320" cy="320" r="290"
+            fill="none" stroke="rgba(0,212,204,0.18)" stroke-width="1" stroke-dasharray="5 10"/>
+          <circle class="cm-ring cm-ring-mid" cx="320" cy="320" r="200"
+            fill="none" stroke="rgba(0,212,204,0.30)" stroke-width="1.5" stroke-dasharray="10 14"/>
+          <circle class="cm-ring cm-ring-inner" cx="320" cy="320" r="115"
+            fill="none" stroke="rgba(0,212,204,0.50)" stroke-width="2" stroke-dasharray="14 7"/>
+          <circle class="cm-core" cx="320" cy="320" r="3.5" fill="rgba(0,212,204,0.85)"/>
+          <line class="cm-wave" x1="320" y1="320" x2="320" y2="80"
+            stroke="rgba(0,212,204,0.06)" stroke-width="1"/>
+          <line class="cm-wave" x1="320" y1="320" x2="560" y2="320"
+            stroke="rgba(0,212,204,0.06)" stroke-width="1"/>
+          <line class="cm-wave" x1="320" y1="320" x2="320" y2="560"
+            stroke="rgba(0,212,204,0.06)" stroke-width="1"/>
+          <line class="cm-wave" x1="320" y1="320" x2="80" y2="320"
+            stroke="rgba(0,212,204,0.06)" stroke-width="1"/>
+        </svg>
+      </div>
+
+      <!-- Results content (dynamically rendered by app.js) -->
+      <div class="content-grid" id="results-content">
+      </div>
+
+      <!-- Debug panel -->
+      <div class="content-grid" style="padding-top:0;">
+        <details class="debug-panel">
+          <summary class="type-data" style="cursor:pointer; color:var(--soft-silver); padding:var(--space-sm) 0; list-style:none;">
+            ▸ Score Debug Panel
+          </summary>
+          <div id="debug-content" class="type-data debug-content"></div>
+        </details>
+      </div>
+
+    </div>
+
+  </div><!-- /#app -->
+
+  <script src="app.js"></script>
+</body>
+</html>
