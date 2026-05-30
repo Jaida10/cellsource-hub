@@ -929,7 +929,7 @@ function handleEmailSubmit() {
   assessmentState.email = email;
 
   calculateScores();
-  submitToAirtable();
+  submitEmail(assessmentState.email, assessmentState.scores, getPrimaryCategory());
 
   const q13 = assessmentState.openText.q13;
   const primaryCat = getPrimaryCategory();
@@ -947,41 +947,28 @@ function isValidEmail(email) {
 }
 
 // ═══════════════════════════════════════════════════════════
-// AIRTABLE SUBMISSION
+// EMAIL SUBMISSION — Cloudflare Worker
 // ═══════════════════════════════════════════════════════════
-async function submitToAirtable() {
-  if (AIRTABLE_API_KEY === 'YOUR_AIRTABLE_API_KEY') return;
-
-  const primary = getPrimaryCategory();
-  const secondaries = getSecondaryCategories();
-
-  const fields = {
-    'Email': assessmentState.email,
-    'Primary Pattern': CAT_NAMES[primary],
-    'Secondary Patterns': secondaries.map(c => CAT_NAMES[c]).join(', '),
-    'Cat1 Score': assessmentState.scores.cat1,
-    'Cat2 Score': assessmentState.scores.cat2,
-    'Cat3 Score': assessmentState.scores.cat3,
-    'Cat4 Score': assessmentState.scores.cat4,
-    'Cat5 Score': assessmentState.scores.cat5,
-    'Q3 Response': assessmentState.openText.q3,
-    'Q9 Response': assessmentState.openText.q9,
-    'Q12 Flags': assessmentState.q12flags.join(', '),
-    'Q13 Response': assessmentState.openText.q13,
-    'Submitted At': new Date().toISOString()
-  };
-
+async function submitEmail(email, score, category) {
   try {
-    await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE_NAME)}`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${AIRTABLE_API_KEY}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ fields })
-    });
-  } catch (_) {
-    // Fail silently — never block user from results
+    var res = await fetch(
+      'https://cellsource-email-capture.jaidasuthers.workers.dev',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: email,
+          score: score,
+          category: category,
+          destination: 'assessment'
+        })
+      }
+    );
+    var data = await res.json();
+    return res.ok;
+  } catch(e) {
+    console.error('Email capture error:', e);
+    return false;
   }
 }
 

@@ -296,10 +296,11 @@
       <p class="hub-newsletter-heading">Stay in the frequency.</p>
       <p class="hub-newsletter-sub">The latest on cellular health, frequency technology and what we are building.</p>
     </div>
-    <form class="hub-newsletter-form" onsubmit="return false;">
-      <input type="email" class="hub-newsletter-input" placeholder="Your email address" aria-label="Email address">
-      <button type="submit" class="hub-newsletter-btn">Subscribe</button>
+    <form class="hub-newsletter-form" id="ol-newsletter-form" onsubmit="return false;">
+      <input type="email" class="hub-newsletter-input" id="ol-email-input" placeholder="Your email address" aria-label="Email address">
+      <button type="submit" class="hub-newsletter-btn" id="ol-submit-btn">Subscribe</button>
     </form>
+    <p id="ol-form-msg" style="display:none; margin-top:12px; font-family:'Inter',sans-serif; font-size:14px;"></p>
   </div>
 </section>
 
@@ -547,6 +548,51 @@
         requestAnimationFrame(tick);
       }
     }, { passive: false });
+  })();
+
+  /* ── Newsletter email capture ── */
+  (function() {
+    var input = document.getElementById('ol-email-input');
+    var btn = document.getElementById('ol-submit-btn');
+    var msg = document.getElementById('ol-form-msg');
+    if (!btn) return;
+    btn.addEventListener('click', async function() {
+      var email = input.value.trim();
+      if (!email) return;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        var res = await fetch(
+          'https://cellsource-email-capture.jaidasuthers.workers.dev',
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              email: email,
+              source: 'OlyLife Page Newsletter',
+              destination: 'website'
+            })
+          }
+        );
+        var data = await res.json();
+        if (res.ok) {
+          msg.textContent = 'You are in.';
+          msg.style.color = '#00D4CC';
+          msg.style.display = 'block';
+          input.value = '';
+        } else {
+          msg.textContent = data.error || 'Something went wrong. Try again.';
+          msg.style.color = '#E8E8E0';
+          msg.style.display = 'block';
+        }
+      } catch(e) {
+        msg.textContent = 'Something went wrong. Try again.';
+        msg.style.color = '#E8E8E0';
+        msg.style.display = 'block';
+      }
+      btn.textContent = 'Subscribe';
+      btn.disabled = false;
+    });
   })();
 
 })();
