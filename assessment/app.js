@@ -929,7 +929,44 @@ function handleEmailSubmit() {
   assessmentState.email = email;
 
   calculateScores();
-  submitEmail(assessmentState.email, assessmentState.scores, getPrimaryCategory());
+  var fullCategory = getPrimaryCategory();
+
+  var questionLabels = [
+    'How do you feel when you wake up in the morning?',
+    'How much time do you spend on your health each week?',
+    'What motivates you to work on your health?',
+    'How do you feel around 3pm each day?',
+    'How well do you recover physically after exercise or a big day?',
+    'Where do you most feel stress or tension in your body?',
+    'How would you describe your mental focus and clarity?',
+    'How would you describe your sleep quality?',
+    'Do you experience physical tension or discomfort regularly?',
+    'How easily does your nervous system switch off and relax?',
+    'What have you already tried to improve your health?',
+    'What is your personal message or intention for your health?'
+  ];
+
+  var answerLabels = {
+    'a': 'A', 'b': 'B', 'c': 'C', 'd': 'D'
+  };
+
+  var fullResultsLines = [];
+  var answers = assessmentState.answers || {};
+
+  for (var i = 0; i < questionLabels.length; i++) {
+    var qNum = 'q' + (i + 1);
+    var answer = answers[qNum];
+    var answerDisplay = answer ? (answerLabels[answer] || answer) : 'Not answered';
+    fullResultsLines.push('Q' + (i + 1) + ': ' + questionLabels[i]);
+    fullResultsLines.push('Answer: ' + answerDisplay);
+    fullResultsLines.push('');
+  }
+
+  var fullResultsText = fullResultsLines.join('\n');
+  fullResultsText += 'Primary Category: ' + fullCategory + '\n';
+  fullResultsText += 'Total Score: ' + (assessmentState.totalScore || 0);
+
+  submitEmail(assessmentState.email, assessmentState.scores, fullCategory, fullResultsText);
 
   const q13 = assessmentState.openText.q13;
   const primaryCat = getPrimaryCategory();
@@ -949,7 +986,7 @@ function isValidEmail(email) {
 // ═══════════════════════════════════════════════════════════
 // EMAIL SUBMISSION — Cloudflare Worker
 // ═══════════════════════════════════════════════════════════
-async function submitEmail(email, score, category) {
+async function submitEmail(email, score, category, resultsText) {
   try {
     var res = await fetch(
       'https://cellsource-email-capture.jaidasuthers.workers.dev',
@@ -960,6 +997,7 @@ async function submitEmail(email, score, category) {
           email: email,
           score: score,
           category: category,
+          resultsText: resultsText,
           destination: 'assessment'
         })
       }
