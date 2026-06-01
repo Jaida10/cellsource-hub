@@ -1512,9 +1512,9 @@ function buildProductSection(template, q9, catKey) {
       </div>
 
       <div class="results-cta-wrap">
-        <p class="next-step-line">${escHtml(template.nextStepLine)}</p>
-        <p style="text-align:center; color:var(--teal-primary); font-size:1.1em; font-weight:500; letter-spacing:0.04em; margin:var(--space-sm) 0;">This is frequency technology.</p>
-        <a href="https://www.olylife.com" target="_blank" rel="noopener noreferrer" class="btn-primary" role="button" aria-label="Shop OlyLife">
+        <p class="next-step-line results-closing-body">${escHtml(template.nextStepLine)}</p>
+        <p class="results-closing-headline" style="text-align:center; color:var(--teal-primary); font-size:1.1em; font-weight:500; letter-spacing:0.04em; margin:var(--space-sm) 0;">This is frequency technology.</p>
+        <a href="https://www.olylife.com" target="_blank" rel="noopener noreferrer" class="btn-primary" role="button" aria-label="Shop OlyLife" style="text-decoration: none;">
           <span class="gradient-text">Shop OlyLife</span>
         </a>
         <p class="affiliate-disclosure">
