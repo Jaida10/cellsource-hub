@@ -1514,11 +1514,11 @@ function buildProductSection(template, q9, catKey) {
       <div class="results-cta-wrap">
         <p class="next-step-line">${escHtml(template.nextStepLine)}</p>
         <p style="text-align:center; color:var(--teal-primary); font-size:1.1em; font-weight:500; letter-spacing:0.04em; margin:var(--space-sm) 0;">This is frequency technology.</p>
-        <a href="#" class="btn-primary" role="button" aria-label="See the OlyLife products recommended for your pattern">
-          <span class="gradient-text">See the OlyLife products recommended for your pattern</span>
+        <a href="https://www.olylife.com" target="_blank" rel="noopener noreferrer" class="btn-primary" role="button" aria-label="Shop OlyLife">
+          <span class="gradient-text">Shop OlyLife</span>
         </a>
         <p class="affiliate-disclosure">
-          Cellsource is an affiliate of OlyLife. We earn a commission on purchases made through our links at no extra cost to you. The science we share is independent of that relationship.
+          Cellsource is an affiliate of OlyLife. We earn a commission on purchases made through our links at no extra cost to you.
         </p>
       </div>
     </div>
