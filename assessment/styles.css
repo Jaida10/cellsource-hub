@@ -1871,15 +1871,86 @@ button[type="submit"] span, button[type="submit"] {
    RESULTS CLOSING TYPOGRAPHY
 ───────────────────────────────────────── */
 .results-closing-body {
-  font-size: clamp(18px, 2.2vw, 24px);
-  font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 500;
+  font-style: italic;
   line-height: 1.6;
   color: #E8E8E0;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 24px;
 }
 
 .results-closing-headline {
-  font-size: clamp(22px, 2.8vw, 30px);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 4vw, 52px);
   font-weight: 700;
   color: #00D4CC;
-  line-height: 1.4;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* ─────────────────────────────────────────
+   RESULTS EXPLORE NAV
+───────────────────────────────────────── */
+.results-explore-nav {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(0, 212, 204, 0.12);
+  text-align: center;
+}
+
+.results-explore-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0, 212, 204, 0.5);
+  margin-bottom: 20px;
+}
+
+.results-explore-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.results-explore-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #E8E8E0;
+  text-decoration: none;
+  border: 1px solid rgba(232, 232, 224, 0.2);
+  border-radius: 6px;
+  padding: 12px 24px;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.results-explore-btn:hover {
+  border-color: rgba(0, 212, 204, 0.5);
+  color: #00D4CC;
+}
+
+.results-explore-btn--primary {
+  color: #0B1426;
+  background: #00D4CC;
+  border-color: #00D4CC;
+}
+
+.results-explore-btn--primary:hover {
+  background: #00b8b2;
+  border-color: #00b8b2;
+  color: #0B1426;
+}
+
+@media (max-width: 480px) {
+  .results-explore-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }

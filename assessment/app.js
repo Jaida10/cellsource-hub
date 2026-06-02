@@ -1520,6 +1520,14 @@ function buildProductSection(template, q9, catKey) {
         <p class="affiliate-disclosure">
           Cellsource is an affiliate of OlyLife. We earn a commission on purchases made through our links at no extra cost to you.
         </p>
+        <div class="results-explore-nav">
+          <p class="results-explore-label">Continue exploring</p>
+          <div class="results-explore-buttons">
+            <a href="../index.html" class="results-explore-btn results-explore-btn--primary">The Hub</a>
+            <a href="../science/science.html" class="results-explore-btn">The Science</a>
+            <a href="../olylife/olylife.html" class="results-explore-btn">Explore OlyLife</a>
+          </div>
+        </div>
       </div>
     </div>
   `;
